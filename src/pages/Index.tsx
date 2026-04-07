@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import IntroSection from "@/components/IntroSection";
 import AboutSection from "@/components/AboutSection";
 import CredentialsBar from "@/components/CredentialsBar";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
