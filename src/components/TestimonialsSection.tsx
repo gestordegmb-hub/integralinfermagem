@@ -1,35 +1,27 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
-import depoimento1 from "@/assets/depoimentos_1.png";
-import depoimento2 from "@/assets/depoimentos_2.png";
-import depoimento3 from "@/assets/depoimentos_3.png";
-import depoimento4 from "@/assets/depoimentos_4.png";
 
 const testimonials = [
   {
     name: "Vinicius Alves Araújo",
     role: "Paciente — Tratamento de Feridas",
     text: "Simplesmente perfeito o trabalho de vocês. Meu filho chegou com uma lesão profunda e hoje está super bem. Profissionalismo e carinho em cada atendimento.",
-    image: depoimento1,
   },
   {
     name: "Monique Fernandes Torres",
     role: "Paciente — Estomia",
     text: "Profissionais super habilitadas, atenciosas e atualizadas. O melhor consultório de enfermagem da Região dos Lagos. Recomendo de olhos fechados.",
-    image: depoimento2,
   },
   {
     name: "Janaína Martins Rocha",
     role: "Paciente — Laserterapia",
     text: "Atendimento de excelência e olhar atento às necessidades de cada paciente. Recursos como ozônio e laser que aceleram o tratamento de forma impressionante.",
-    image: depoimento3,
   },
   {
     name: "Fabio Dalanhese",
     role: "Paciente — Tratamento Avançado",
     text: "Fomos muito bem acolhidos, o tratamento prescrito para minha tia com alta tecnologia. Equipe extremamente profissional e dedicada. Recomendo!",
-    image: depoimento4,
   },
 ];
 
@@ -74,12 +66,6 @@ const TestimonialsSection = () => {
                 "{testimonials[current].text}"
               </p>
               <div className="flex flex-col items-center">
-                <img
-                  src={testimonials[current].image}
-                  alt={testimonials[current].name}
-                  className="w-16 h-16 rounded-full object-cover mb-4 border-[3px] border-gold/30"
-                  loading="lazy"
-                />
                 <p className="font-semibold text-base text-foreground font-sans">{testimonials[current].name}</p>
                 <p className="text-[12px] text-muted-foreground mt-1.5 uppercase tracking-[0.1em] font-sans">{testimonials[current].role}</p>
               </div>
