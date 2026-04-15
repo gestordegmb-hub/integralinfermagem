@@ -8,7 +8,7 @@ const HeroSection = () => {
         <img
           src={heroImg}
           alt="Clínica Integral - Enfermeira profissional em ambiente clínico moderno"
-          className="w-full h-full object-cover object-[center_20%] sm:object-center"
+          className="w-full h-full object-cover object-[center_30%] sm:object-[center_25%]"
           loading="eager"
           width={1920}
           height={1080}
