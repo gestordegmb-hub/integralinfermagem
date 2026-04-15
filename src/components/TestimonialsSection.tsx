@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
-import depoimento1 from "@/assets/depoimentos_1.png";
-import depoimento2 from "@/assets/depoimentos_2.png";
-import depoimento3 from "@/assets/depoimentos_3.png";
-import depoimento4 from "@/assets/depoimentos_4.png";
 
 const testimonials = [
   {
