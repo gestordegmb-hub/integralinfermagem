@@ -2,13 +2,13 @@ import heroImg from "@/assets/hero-clinic.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative h-[85vh] sm:h-[90vh] lg:h-screen overflow-hidden">
+    <section id="inicio" className="relative h-screen overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
           src={heroImg}
           alt="Clínica Integral - Enfermeira profissional em ambiente clínico moderno"
-          className="w-full h-full object-cover object-[center_20%] sm:object-center"
+          className="w-full h-full object-cover object-[center_30%] sm:object-[center_25%]"
           loading="eager"
           width={1920}
           height={1080}
