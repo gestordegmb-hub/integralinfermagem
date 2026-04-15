@@ -2,7 +2,7 @@ import heroImg from "@/assets/hero-clinic.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative h-[85vh] sm:h-[90vh] lg:h-screen overflow-hidden">
+    <section id="inicio" className="relative h-screen overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
