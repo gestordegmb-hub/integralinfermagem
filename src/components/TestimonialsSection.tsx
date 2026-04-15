@@ -66,12 +66,6 @@ const TestimonialsSection = () => {
                 "{testimonials[current].text}"
               </p>
               <div className="flex flex-col items-center">
-                <img
-                  src={testimonials[current].image}
-                  alt={testimonials[current].name}
-                  className="w-16 h-16 rounded-full object-cover mb-4 border-[3px] border-gold/30"
-                  loading="lazy"
-                />
                 <p className="font-semibold text-base text-foreground font-sans">{testimonials[current].name}</p>
                 <p className="text-[12px] text-muted-foreground mt-1.5 uppercase tracking-[0.1em] font-sans">{testimonials[current].role}</p>
               </div>
