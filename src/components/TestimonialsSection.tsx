@@ -7,25 +7,21 @@ const testimonials = [
     name: "Vinicius Alves Araújo",
     role: "Paciente — Tratamento de Feridas",
     text: "Simplesmente perfeito o trabalho de vocês. Meu filho chegou com uma lesão profunda e hoje está super bem. Profissionalismo e carinho em cada atendimento.",
-    image: depoimento1,
   },
   {
     name: "Monique Fernandes Torres",
     role: "Paciente — Estomia",
     text: "Profissionais super habilitadas, atenciosas e atualizadas. O melhor consultório de enfermagem da Região dos Lagos. Recomendo de olhos fechados.",
-    image: depoimento2,
   },
   {
     name: "Janaína Martins Rocha",
     role: "Paciente — Laserterapia",
     text: "Atendimento de excelência e olhar atento às necessidades de cada paciente. Recursos como ozônio e laser que aceleram o tratamento de forma impressionante.",
-    image: depoimento3,
   },
   {
     name: "Fabio Dalanhese",
     role: "Paciente — Tratamento Avançado",
     text: "Fomos muito bem acolhidos, o tratamento prescrito para minha tia com alta tecnologia. Equipe extremamente profissional e dedicada. Recomendo!",
-    image: depoimento4,
   },
 ];
 
