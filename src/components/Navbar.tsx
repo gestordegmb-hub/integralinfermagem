@@ -27,82 +27,87 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-background/95 backdrop-blur-xl border-b border-border/40 py-3 shadow-sm"
-            : "bg-primary/20 backdrop-blur-md py-4 sm:py-5"
+            ? "bg-background/95 backdrop-blur-xl border-b border-border/40 py-2.5 shadow-sm"
+            : "bg-primary/20 backdrop-blur-md py-3 lg:py-4"
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <a href="#inicio" className="flex items-center gap-3">
-            <img
-              src={logoImg}
-              alt="Clínica Integral"
-              className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover"
-            />
-            <div>
-              <span
-                className={`font-semibold text-base sm:text-lg leading-tight block transition-colors duration-500 font-serif ${
-                  scrolled ? "text-foreground" : "text-white"
-                }`}
-              >
-                Clínica Integral
-              </span>
-              <span
-                className={`text-[9px] sm:text-[10px] uppercase tracking-[0.2em] leading-tight block transition-colors duration-500 font-sans font-medium ${
-                  scrolled ? "text-muted-foreground" : "text-white/60"
-                }`}
-              >
-                Enfermagem Especializada
-              </span>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Main row: Logo | Nav Links | Actions */}
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <a href="#inicio" className="flex items-center gap-2.5 shrink-0">
+              <img
+                src={logoImg}
+                alt="Clínica Integral"
+                className="w-10 h-10 lg:w-11 lg:h-11 rounded-full object-cover"
+              />
+              <div className="leading-none">
+                <span
+                  className={`font-semibold text-[15px] lg:text-base block transition-colors duration-500 font-serif ${
+                    scrolled ? "text-foreground" : "text-white"
+                  }`}
+                >
+                  Clínica Integral
+                </span>
+                <span
+                  className={`text-[8px] lg:text-[9px] uppercase tracking-[0.18em] block mt-0.5 transition-colors duration-500 font-sans font-medium ${
+                    scrolled ? "text-muted-foreground" : "text-white/55"
+                  }`}
+                >
+                  Enfermagem Especializada
+                </span>
+              </div>
+            </a>
+
+            {/* Desktop Navigation Links - centered */}
+            <div className="hidden lg:flex items-center gap-7 xl:gap-9">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`text-[11px] uppercase tracking-[0.12em] font-medium transition-colors duration-300 font-sans hover:text-gold whitespace-nowrap ${
+                    scrolled ? "text-muted-foreground" : "text-white/80"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
-          </a>
 
-          {/* Desktop links */}
-          <div className="hidden lg:flex items-center gap-9">
-            {navLinks.map((link) => (
+            {/* Right actions */}
+            <div className="flex items-center gap-3 lg:gap-4 shrink-0">
               <a
-                key={link.href}
-                href={link.href}
-                className={`text-[11px] uppercase tracking-[0.12em] font-medium transition-colors duration-300 font-sans hover:text-gold ${
-                  scrolled
-                    ? "text-muted-foreground"
-                    : "text-white/80"
+                href="https://wa.me/5522974017588"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`hidden md:flex items-center gap-1.5 text-[11px] lg:text-[12px] font-medium transition-colors whitespace-nowrap ${
+                  scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"
                 }`}
               >
-                {link.label}
+                <Phone className="w-3.5 h-3.5 shrink-0" />
+                (22) 97401-7588
               </a>
-            ))}
-          </div>
 
-          <div className="flex items-center gap-4">
-            <a
-              href="https://wa.me/5522974017588"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`hidden md:flex items-center gap-2 text-[12px] font-medium transition-colors ${
-                scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"
-              }`}
-            >
-              <Phone className="w-3.5 h-3.5" />
-              (22) 97401-7588
-            </a>
-            <a href="#agendamento" className="hidden sm:block">
-              <Button
-                variant="gold"
-                size="default"
-                className="text-[11px] px-6 py-2.5 h-10 uppercase tracking-[0.12em] hover:scale-105"
+              <a href="#agendamento" className="hidden sm:block">
+                <Button
+                  variant="gold"
+                  size="default"
+                  className="text-[10px] lg:text-[11px] px-4 lg:px-6 py-2 h-9 lg:h-10 uppercase tracking-[0.12em] hover:scale-105"
+                >
+                  Agendar Consulta
+                </Button>
+              </a>
+
+              <button
+                className={`lg:hidden p-2 rounded-md transition-all duration-300 ${
+                  scrolled ? "text-foreground hover:bg-muted" : "text-white hover:bg-white/10"
+                }`}
+                onClick={() => setIsOpen(true)}
+                aria-label="Abrir menu"
               >
-                Agendar Consulta
-              </Button>
-            </a>
-            <button
-              className={`lg:hidden p-2.5 rounded-md transition-all duration-300 ${
-                scrolled ? "text-foreground hover:bg-muted" : "text-white hover:bg-white/10"
-              }`}
-              onClick={() => setIsOpen(true)}
-              aria-label="Abrir menu"
-            >
-              <Menu className="w-5 h-5" />
-            </button>
+                <Menu className="w-5 h-5" />
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -112,29 +117,29 @@ const Navbar = () => {
         <div className="fixed inset-0 z-[60] bg-foreground/30 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
       )}
 
-      {/* Sidebar */}
+      {/* Mobile Sidebar */}
       <aside
-        className={`fixed top-0 right-0 z-[70] h-full w-[85vw] max-w-sm bg-background transform transition-transform duration-500 ease-out ${
+        className={`fixed top-0 right-0 z-[70] h-full w-[80vw] max-w-xs bg-background transform transition-transform duration-500 ease-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{ boxShadow: isOpen ? "-20px 0 60px -15px rgba(0,0,0,0.15)" : "none" }}
       >
-        <div className="flex items-center justify-between p-6 border-b border-border/50">
-          <a href="#inicio" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-            <img src={logoImg} alt="Clínica Integral" className="w-10 h-10 rounded-full object-cover" />
-            <span className="font-semibold text-base text-foreground font-serif">Clínica Integral</span>
+        <div className="flex items-center justify-between p-5 border-b border-border/50">
+          <a href="#inicio" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
+            <img src={logoImg} alt="Clínica Integral" className="w-9 h-9 rounded-full object-cover" />
+            <span className="font-semibold text-[15px] text-foreground font-serif">Clínica Integral</span>
           </a>
-          <button className="text-muted-foreground hover:text-foreground transition-colors p-2" onClick={() => setIsOpen(false)} aria-label="Fechar menu">
+          <button className="text-muted-foreground hover:text-foreground transition-colors p-1.5" onClick={() => setIsOpen(false)} aria-label="Fechar menu">
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        <nav className="p-6 space-y-1">
+        <nav className="p-5 space-y-0.5">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block px-4 py-4 text-[14px] font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-all"
+              className="block px-3 py-3.5 text-[13px] font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-all"
               onClick={() => setIsOpen(false)}
             >
               {link.label}
@@ -142,13 +147,13 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-border/50 space-y-4 bg-background">
-          <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-[14px] text-muted-foreground hover:text-gold transition-colors">
+        <div className="absolute bottom-0 left-0 right-0 p-5 border-t border-border/50 space-y-3 bg-background">
+          <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[13px] text-muted-foreground hover:text-gold transition-colors">
             <Phone className="w-4 h-4" />
             (22) 97401-7588
           </a>
           <a href="#agendamento" onClick={() => setIsOpen(false)}>
-            <Button variant="gold" size="default" className="w-full gap-2 h-12 text-[13px] uppercase tracking-[0.12em]">
+            <Button variant="gold" size="default" className="w-full gap-2 h-11 text-[12px] uppercase tracking-[0.12em]">
               <Calendar className="w-4 h-4" />
               Agendar Consulta
             </Button>
