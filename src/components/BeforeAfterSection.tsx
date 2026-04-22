@@ -175,12 +175,6 @@ const BeforeAfterSection = () => {
             <h3 className="text-lg sm:text-xl font-semibold text-foreground">
               {current.title}
             </h3>
-            <p className="text-[11px] sm:text-xs uppercase tracking-[0.1em] text-accent mt-1 font-medium">
-              {current.procedure}
-            </p>
-            <p className="text-sm text-muted-foreground mt-1">
-              {current.timeline}
-            </p>
           </div>
 
           {/* Navigation */}
