@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 import before1 from "@/assets/before-case-1-uploaded.jpg";
 import after1 from "@/assets/after-case-1-uploaded.jpg";
-import before2 from "@/assets/before-2.jpg";
+import before2 from "@/assets/before-case-2-uploaded.jpg";
 import after2 from "@/assets/after-2.jpg";
 
 const cases = [
