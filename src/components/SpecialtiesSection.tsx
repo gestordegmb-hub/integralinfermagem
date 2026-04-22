@@ -6,6 +6,7 @@ import ostomyCareIcon from "@/assets/icon-cuidados-estomias.png";
 import diabeticFootIcon from "@/assets/icon-pe-diabetico.png";
 import laserOzoneIcon from "@/assets/icon-laser-ozonio.png";
 import ledTherapyIcon from "@/assets/icon-led-terapia.png";
+import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png";
 
 type Service = {
   title: string;
@@ -60,21 +61,7 @@ const services: Service[] = [
   {
     title: "Terapia Regenerativa (PRF)",
     desc: "Cicatrização natural através de fibrina rica em plaquetas.",
-    icon: (
-      <>
-        {/* Test tube with cells/platelets */}
-        <path d="M10 3v15a4 4 0 0 0 8 0V3" />
-        <path d="M8 3h12" />
-        <path d="M10 10h8" />
-        <circle cx="12.5" cy="14" r="1" fill="hsl(var(--gold))" stroke="none" />
-        <circle cx="15.5" cy="16" r="1" fill="hsl(var(--gold))" stroke="none" />
-        <circle cx="14" cy="12.5" r="0.8" fill="hsl(var(--gold))" stroke="none" />
-        <circle cx="13" cy="17" r="0.7" fill="hsl(var(--gold))" stroke="none" />
-        <circle cx="16" cy="13.5" r="0.7" fill="hsl(var(--gold))" stroke="none" />
-        <path d="M22 8l2-2M22 14h2" />
-        <path d="M6 8l-2-2M6 14H4" />
-      </>
-    ),
+    imageIcon: regenerativeTherapyIcon,
   },
   {
     title: "Atendimento Domiciliar e em Consultório",
