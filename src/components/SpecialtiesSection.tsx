@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ostomyCareIcon from "@/assets/icon-cuidados-estomias.png";
+import diabeticFootIcon from "@/assets/icon-pe-diabetico.png";
 
 type Service = {
   title: string;
@@ -53,20 +54,7 @@ const services: Service[] = [
   {
     title: "Avaliação do Pé Diabético",
     desc: "Prevenção e cuidado para evitar complicações em pessoas com diabetes.",
-    icon: (
-      <>
-        {/* Detailed foot with magnifying glass */}
-        <path d="M8 24c0-2 1-4 2-5s2-3 2-6c0-4 1-7 2-9" />
-        <path d="M14 4c1 2 2 5 2 9 0 3 1 5 2 6s2 3 2 5" />
-        <path d="M8 24h12" />
-        <ellipse cx="11" cy="6" rx="1" ry="1.5" />
-        <ellipse cx="13.5" cy="5.5" rx="0.8" ry="1.2" />
-        <ellipse cx="15.5" cy="6.5" rx="0.8" ry="1.2" />
-        <circle cx="19" cy="18" r="4" />
-        <path d="M22 21l3 3" />
-        <path d="M17.5 18h3M19 16.5v3" />
-      </>
-    ),
+    imageIcon: diabeticFootIcon,
   },
   {
     title: "Laserterapia e Ozonioterapia",
