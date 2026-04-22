@@ -33,19 +33,7 @@ const services: Service[] = [
   {
     title: "Tratamento Avançado de Feridas",
     desc: "Tratamento especializado para acelerar a cicatrização e prevenir complicações.",
-    icon: (
-      <>
-        {/* Bandage roll with cross */}
-        <rect x="7" y="9" width="14" height="10" rx="3" />
-        <path d="M7 12h14" />
-        <path d="M7 16h14" />
-        <path d="M14 9v10" />
-        <path d="M12 12.5v3M16 12.5v3" />
-        <circle cx="10" cy="6" r="1" fill="hsl(var(--gold))" stroke="none" />
-        <path d="M10 7v2" />
-        <path d="M4 14c0 0 1-2 3-2" />
-      </>
-    ),
+    imageIcon: woundCareIcon,
   },
   {
     title: "Cuidados com Estomias",
