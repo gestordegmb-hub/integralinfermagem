@@ -9,6 +9,7 @@ import ledTherapyIcon from "@/assets/icon-led-terapia.png";
 import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png";
 import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio.png";
 import podiatryIcon from "@/assets/icon-podiatria.png";
+import postoperativeCareIcon from "@/assets/icon-cuidados-pos-operatorios.png";
 
 type Service = {
   title: string;
@@ -78,20 +79,7 @@ const services: Service[] = [
   {
     title: "Cuidados Pós-operatórios",
     desc: "Suporte à recuperação e prevenção de infecções após cirurgias.",
-    icon: (
-      <>
-        {/* Clipboard with medical checklist */}
-        <rect x="6" y="5" width="16" height="19" rx="2" />
-        <path d="M10 5V3.5a1.5 1.5 0 0 1 1.5-1.5h5a1.5 1.5 0 0 1 1.5 1.5V5" />
-        <path d="M10 11h8" />
-        <path d="M10 15h8" />
-        <path d="M10 19h5" />
-        <circle cx="8.5" cy="11" r="0.6" fill="hsl(var(--gold))" stroke="none" />
-        <circle cx="8.5" cy="15" r="0.6" fill="hsl(var(--gold))" stroke="none" />
-        <circle cx="8.5" cy="19" r="0.6" fill="hsl(var(--gold))" stroke="none" />
-        <path d="M14 2v1" />
-      </>
-    ),
+    imageIcon: postoperativeCareIcon,
   },
   {
     title: "Mentoria e Capacitação",
