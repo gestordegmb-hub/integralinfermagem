@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import woundCareIcon from "@/assets/icon-tratamento-feridas.png";
 import ostomyCareIcon from "@/assets/icon-cuidados-estomias.png";
 import diabeticFootIcon from "@/assets/icon-pe-diabetico.png";
+import laserOzoneIcon from "@/assets/icon-laser-ozonio.png";
 
 type Service = {
   title: string;
