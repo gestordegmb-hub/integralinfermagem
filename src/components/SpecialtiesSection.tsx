@@ -49,20 +49,7 @@ const services: Service[] = [
   {
     title: "Laserterapia e Ozonioterapia",
     desc: "Tecnologia avançada para regeneração tecidual e controle de infecções.",
-    icon: (
-      <>
-        {/* Laser device with beam rays */}
-        <rect x="4" y="11" width="10" height="6" rx="2" />
-        <path d="M14 14h4" />
-        <circle cx="21" cy="14" r="2" />
-        <path d="M21 9v2M21 16v2" />
-        <path d="M25 14h1" />
-        <path d="M24 11l1-1M24 17l1 1" />
-        <circle cx="7" cy="14" r="1" fill="hsl(var(--gold))" stroke="none" />
-        <path d="M18 12l1-2M18 16l1 2" />
-        <path d="M6 11V9M10 11V9" />
-      </>
-    ),
+    imageIcon: laserOzoneIcon,
   },
   {
     title: "LEDterapia",
