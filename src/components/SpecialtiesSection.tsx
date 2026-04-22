@@ -1,16 +1,33 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import ostomyCareIcon from "@/assets/icon-cuidados-estomias.png";
 
-const ServiceIcon = ({ children }: { children: React.ReactNode }) => (
-  <div className="w-16 h-16 rounded-full bg-[hsl(var(--gold)/0.10)] flex items-center justify-center mb-5 group-hover:bg-[hsl(var(--gold)/0.18)] transition-colors duration-500">
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="hsl(var(--gold))" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      {children}
-    </svg>
+type Service = {
+  title: string;
+  desc: string;
+  icon?: React.ReactNode;
+  imageIcon?: string;
+};
+
+const ServiceIcon = ({ children, imageSrc, title }: { children?: React.ReactNode; imageSrc?: string; title: string }) => (
+  <div className="w-16 h-16 rounded-full bg-[hsl(var(--gold)/0.10)] flex items-center justify-center mb-5 group-hover:bg-[hsl(var(--gold)/0.18)] transition-colors duration-500 overflow-hidden">
+    {imageSrc ? (
+      <img
+        src={imageSrc}
+        alt={`Ícone de ${title}`}
+        className="w-11 h-11 object-contain"
+        loading="lazy"
+      />
+    ) : (
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="hsl(var(--gold))" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        {children}
+      </svg>
+    )}
   </div>
 );
 
-const services = [
+const services: Service[] = [
   {
     title: "Tratamento Avançado de Feridas",
     desc: "Tratamento especializado para acelerar a cicatrização e prevenir complicações.",
@@ -31,17 +48,7 @@ const services = [
   {
     title: "Cuidados com Estomias",
     desc: "Suporte e orientação para melhor adaptação e qualidade de vida.",
-    icon: (
-      <>
-        {/* Torso with ostomy bag */}
-        <path d="M8 4c0 0 2 1 6 1s6-1 6-1" />
-        <path d="M9 5v7c0 2-1 4-1 6" />
-        <path d="M19 5v7c0 2 1 4 1 6" />
-        <ellipse cx="14" cy="13" rx="2.5" ry="2" />
-        <path d="M15.5 15l1 5a1.5 1.5 0 0 1-1.5 1.5h-2A1.5 1.5 0 0 1 11.5 20l1-5" />
-        <circle cx="14" cy="13" r="0.8" fill="hsl(var(--gold))" stroke="none" />
-      </>
-    ),
+    imageIcon: ostomyCareIcon,
   },
   {
     title: "Avaliação do Pé Diabético",
@@ -213,7 +220,7 @@ const SpecialtiesSection = () => {
               className="group bg-card rounded-2xl border border-border/50 p-7 sm:p-8 text-center transition-all duration-500 hover:shadow-[0_16px_48px_-12px_rgba(0,0,0,0.10)] hover:-translate-y-1 hover:border-[hsl(var(--gold)/0.3)]"
             >
               <div className="flex justify-center">
-                <ServiceIcon>{s.icon}</ServiceIcon>
+                <ServiceIcon title={s.title} imageSrc={s.imageIcon}>{s.icon}</ServiceIcon>
               </div>
               <h3 className="font-semibold text-lg sm:text-xl text-foreground font-serif mb-3 leading-tight">
                 {s.title}
