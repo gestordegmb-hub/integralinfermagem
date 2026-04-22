@@ -10,6 +10,7 @@ import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png"
 import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio.png";
 import podiatryIcon from "@/assets/icon-podiatria.png";
 import postoperativeCareIcon from "@/assets/icon-cuidados-pos-operatorios.png";
+import mentoringTrainingIcon from "@/assets/icon-mentoria-capacitacao.png";
 
 type Service = {
   title: string;
@@ -84,18 +85,7 @@ const services: Service[] = [
   {
     title: "Mentoria e Capacitação",
     desc: "Educação profissional e orientação para enfermeiros especialistas.",
-    icon: (
-      <>
-        {/* Open book with graduation cap */}
-        <path d="M2 20V8l12-3 12 3v12" />
-        <path d="M14 5v15" />
-        <path d="M2 20c4-1 8-1 12 0 4-1 8-1 12 0" />
-        <path d="M2 8c4-1 8-1 12 0 4-1 8-1 12 0" />
-        <path d="M8 2l6 2 6-2" />
-        <path d="M14 4v-1" />
-        <circle cx="20" cy="1.5" r="0.5" fill="hsl(var(--gold))" stroke="none" />
-      </>
-    ),
+    imageIcon: mentoringTrainingIcon,
   },
 ];
 
