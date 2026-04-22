@@ -8,6 +8,7 @@ import laserOzoneIcon from "@/assets/icon-laser-ozonio.png";
 import ledTherapyIcon from "@/assets/icon-led-terapia.png";
 import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png";
 import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio.png";
+import podiatryIcon from "@/assets/icon-podiatria.png";
 
 type Service = {
   title: string;
@@ -72,19 +73,7 @@ const services: Service[] = [
   {
     title: "Podiatria",
     desc: "Cuidados especializados e tratamento dos pés com técnica e precisão.",
-    icon: (
-      <>
-        {/* Foot silhouette with care symbol */}
-        <path d="M7 25c0-3 1-5 3-7 1.5-1.5 2-3 2-5.5 0-3 .5-6 1.5-8.5" />
-        <path d="M13.5 4c1.5 2.5 2.5 5.5 2.5 8.5 0 2.5.5 4 2 5.5 2 2 3 4 3 7" />
-        <path d="M7 25h14" />
-        <ellipse cx="10" cy="6" rx="1.2" ry="2" />
-        <ellipse cx="12.5" cy="5" rx="1" ry="1.8" />
-        <ellipse cx="15" cy="5.5" rx="1" ry="1.8" />
-        <ellipse cx="17" cy="7" rx="0.8" ry="1.5" />
-        <path d="M14 16l-1.5 3M14 16l1.5 3" />
-      </>
-    ),
+    imageIcon: podiatryIcon,
   },
   {
     title: "Cuidados Pós-operatórios",
