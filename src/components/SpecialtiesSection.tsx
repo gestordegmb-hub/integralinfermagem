@@ -7,6 +7,7 @@ import diabeticFootIcon from "@/assets/icon-pe-diabetico.png";
 import laserOzoneIcon from "@/assets/icon-laser-ozonio.png";
 import ledTherapyIcon from "@/assets/icon-led-terapia.png";
 import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png";
+import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio.png";
 
 type Service = {
   title: string;
@@ -66,16 +67,7 @@ const services: Service[] = [
   {
     title: "Atendimento Domiciliar e em Consultório",
     desc: "Cuidado personalizado onde o paciente estiver, com a mesma qualidade.",
-    icon: (
-      <>
-        {/* House with medical cross */}
-        <path d="M3 14l11-11 11 11" />
-        <path d="M5 13v9a1 1 0 0 0 1 1h5v-5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5h5a1 1 0 0 0 1-1v-9" />
-        <path d="M14 10v5" />
-        <path d="M11.5 12.5h5" />
-        <path d="M10 3h3v3" />
-      </>
-    ),
+    imageIcon: homeClinicCareIcon,
   },
   {
     title: "Podiatria",
