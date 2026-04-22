@@ -7,14 +7,6 @@ import before1 from "@/assets/before-1.jpg";
 import after1 from "@/assets/after-1.jpg";
 import before2 from "@/assets/before-2.jpg";
 import after2 from "@/assets/after-2.jpg";
-import before3 from "@/assets/before-3.jpg";
-import after3 from "@/assets/after-3.jpg";
-import before4 from "@/assets/before-4.jpg";
-import after4 from "@/assets/after-4.jpg";
-import before5 from "@/assets/before-5.jpg";
-import after5 from "@/assets/after-5.jpg";
-import before6 from "@/assets/before-6.jpg";
-import after6 from "@/assets/after-6.jpg";
 
 const cases = [
   {
@@ -30,34 +22,6 @@ const cases = [
     title: "Tratamento Avançado de Feridas",
     procedure: "Lesão por Pressão Estágio III",
     timeline: "12 semanas de tratamento",
-  },
-  {
-    before: before3,
-    after: after3,
-    title: "Cuidados Pós-operatórios",
-    procedure: "Ferida Cirúrgica",
-    timeline: "6 semanas de tratamento",
-  },
-  {
-    before: before4,
-    after: after4,
-    title: "Podiatria",
-    procedure: "Cuidados Especializados",
-    timeline: "10 semanas de tratamento",
-  },
-  {
-    before: before5,
-    after: after5,
-    title: "Cuidados com Estomias",
-    procedure: "Cuidado Contínuo",
-    timeline: "Acompanhamento contínuo",
-  },
-  {
-    before: before6,
-    after: after6,
-    title: "Laserterapia e Ozonioterapia",
-    procedure: "Tratamento de Pele",
-    timeline: "4-6 semanas de tratamento",
   },
 ];
 
