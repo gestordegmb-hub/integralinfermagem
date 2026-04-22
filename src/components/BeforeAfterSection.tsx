@@ -13,15 +13,11 @@ const cases = [
     before: before1,
     after: after1,
     title: "Tratamento Avançado de Feridas",
-    procedure: "Úlcera Diabética",
-    timeline: "8 semanas de tratamento",
   },
   {
     before: before2,
     after: after2,
     title: "Tratamento Avançado de Feridas",
-    procedure: "Lesão por Pressão Estágio III",
-    timeline: "12 semanas de tratamento",
   },
 ];
 
