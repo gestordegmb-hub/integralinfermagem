@@ -20,12 +20,12 @@ type Service = {
 };
 
 const ServiceIcon = ({ children, imageSrc, title }: { children?: React.ReactNode; imageSrc?: string; title: string }) => (
-  <div className="w-16 h-16 rounded-full bg-[hsl(var(--gold)/0.10)] flex items-center justify-center mb-5 group-hover:bg-[hsl(var(--gold)/0.18)] transition-colors duration-500 overflow-hidden">
+  <div className="w-20 h-20 rounded-full bg-card border border-[hsl(var(--gold)/0.24)] flex items-center justify-center mb-5 group-hover:border-[hsl(var(--gold)/0.45)] transition-colors duration-500 overflow-hidden shadow-sm">
     {imageSrc ? (
       <img
         src={imageSrc}
         alt={`Ícone de ${title}`}
-        className="w-11 h-11 object-contain"
+        className="w-full h-full object-cover scale-[1.18]"
         loading="lazy"
       />
     ) : (
