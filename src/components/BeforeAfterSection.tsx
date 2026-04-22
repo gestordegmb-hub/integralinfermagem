@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import before1 from "@/assets/before-1.jpg";
+import before1 from "@/assets/before-case-1-uploaded.jpg";
 import after1 from "@/assets/after-1.jpg";
 import before2 from "@/assets/before-2.jpg";
 import after2 from "@/assets/after-2.jpg";
