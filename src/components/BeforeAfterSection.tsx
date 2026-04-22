@@ -57,7 +57,7 @@ function ImageSlider({ beforeSrc, afterSrc, title }: { beforeSrc: string; afterS
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[480px] mx-auto aspect-[9/16] max-h-[640px] rounded overflow-hidden shadow-lg cursor-col-resize select-none bg-muted"
+      className="relative w-full max-w-[480px] mx-auto aspect-[9/16] max-h-[640px] rounded overflow-hidden shadow-lg cursor-col-resize select-none"
       onMouseMove={handleMouseMove}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
@@ -78,7 +78,7 @@ function ImageSlider({ beforeSrc, afterSrc, title }: { beforeSrc: string; afterS
       <img
         src={afterSrc}
         alt={`Depois - ${title}`}
-        className="absolute inset-0 w-full h-full object-contain bg-muted p-2 sm:p-4"
+        className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
         width={800}
         height={600}
@@ -86,13 +86,13 @@ function ImageSlider({ beforeSrc, afterSrc, title }: { beforeSrc: string; afterS
 
       {/* Before image (clipped) */}
       <div
-        className="absolute inset-0 bg-muted"
+        className="absolute inset-0"
         style={{ clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)` }}
       >
         <img
           src={beforeSrc}
           alt={`Antes - ${title}`}
-          className="w-full h-full object-contain p-2 sm:p-4"
+          className="w-full h-full object-cover"
           loading="lazy"
           width={800}
           height={600}
