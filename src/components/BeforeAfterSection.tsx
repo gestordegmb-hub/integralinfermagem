@@ -57,7 +57,7 @@ function ImageSlider({ beforeSrc, afterSrc, title }: { beforeSrc: string; afterS
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[4/3] max-h-[400px] sm:max-h-[450px] rounded overflow-hidden shadow-lg cursor-col-resize select-none"
+      className="relative w-full max-w-[420px] mx-auto aspect-[9/16] max-h-[640px] rounded overflow-hidden shadow-lg cursor-col-resize select-none bg-muted"
       onMouseMove={handleMouseMove}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
