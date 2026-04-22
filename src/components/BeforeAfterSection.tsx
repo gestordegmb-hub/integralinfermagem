@@ -78,7 +78,7 @@ function ImageSlider({ beforeSrc, afterSrc, title }: { beforeSrc: string; afterS
       <img
         src={afterSrc}
         alt={`Depois - ${title}`}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain bg-muted p-2 sm:p-4"
         loading="lazy"
         width={800}
         height={600}
@@ -86,13 +86,13 @@ function ImageSlider({ beforeSrc, afterSrc, title }: { beforeSrc: string; afterS
 
       {/* Before image (clipped) */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 bg-muted"
         style={{ clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)` }}
       >
         <img
           src={beforeSrc}
           alt={`Antes - ${title}`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain p-2 sm:p-4"
           loading="lazy"
           width={800}
           height={600}
