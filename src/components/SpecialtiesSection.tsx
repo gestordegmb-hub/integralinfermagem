@@ -5,6 +5,7 @@ import woundCareIcon from "@/assets/icon-tratamento-feridas.png";
 import ostomyCareIcon from "@/assets/icon-cuidados-estomias.png";
 import diabeticFootIcon from "@/assets/icon-pe-diabetico.png";
 import laserOzoneIcon from "@/assets/icon-laser-ozonio.png";
+import ledTherapyIcon from "@/assets/icon-led-terapia.png";
 
 type Service = {
   title: string;
@@ -52,22 +53,9 @@ const services: Service[] = [
     imageIcon: laserOzoneIcon,
   },
   {
-    title: "LEDterapia",
+    title: "Led-terapia",
     desc: "Tratamento não invasivo para acelerar a cicatrização e reduzir inflamação.",
-    icon: (
-      <>
-        {/* LED lamp with light rays */}
-        <path d="M10 3h8l-1.5 11h-5L10 3z" />
-        <rect x="11" y="14" width="6" height="3" rx="1" />
-        <path d="M12 17v2.5a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V17" />
-        <path d="M6 6l2 1.5" />
-        <path d="M22 6l-2 1.5" />
-        <path d="M5 10h2.5" />
-        <path d="M23 10h-2.5" />
-        <path d="M14 0v2" />
-        <circle cx="14" cy="8" r="1" fill="hsl(var(--gold))" stroke="none" />
-      </>
-    ),
+    imageIcon: ledTherapyIcon,
   },
   {
     title: "Terapia Regenerativa (PRF)",
