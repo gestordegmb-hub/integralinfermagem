@@ -4,8 +4,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import ozoneTherapyImage from "@/assets/gallery-ozonioterapia.png";
+import ozoneTherapy320 from "@/assets/gallery-ozonioterapia-320.webp";
+import ozoneTherapy377 from "@/assets/gallery-ozonioterapia-377.webp";
 import laserTherapyImage from "@/assets/gallery-laserterapia.jpg";
+import laserTherapy480 from "@/assets/gallery-laserterapia-480.webp";
+import laserTherapy768 from "@/assets/gallery-laserterapia-768.webp";
+import laserTherapy960 from "@/assets/gallery-laserterapia-960.webp";
 import regenerativeTherapyImage from "@/assets/gallery-terapia-regenerativa-prf.jpg";
+import regenerativeTherapy480 from "@/assets/gallery-terapia-regenerativa-prf-480.webp";
+import regenerativeTherapy768 from "@/assets/gallery-terapia-regenerativa-prf-768.webp";
+import regenerativeTherapy960 from "@/assets/gallery-terapia-regenerativa-prf-960.webp";
 
 const galleryItems = [
   {
