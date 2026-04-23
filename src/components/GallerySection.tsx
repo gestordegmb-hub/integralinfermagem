@@ -24,6 +24,18 @@ const galleryItems = [
   },
 ];
 
+const canPreloadGalleryImages = () => {
+  if (typeof navigator === "undefined") return false;
+
+  const connection = (navigator as Navigator & {
+    connection?: { effectiveType?: string; saveData?: boolean };
+  }).connection;
+
+  if (!connection || connection.saveData) return false;
+
+  return connection.effectiveType === "4g";
+};
+
 const GallerySection = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -53,6 +65,8 @@ const GallerySection = () => {
   }, [isAutoplayEnabled]);
 
   useEffect(() => {
+    if (!canPreloadGalleryImages()) return undefined;
+
     galleryItems.slice(0, 2).forEach((item) => {
       const image = new Image();
       image.src = item.src;
@@ -63,6 +77,8 @@ const GallerySection = () => {
   }, []);
 
   useEffect(() => {
+    if (!canPreloadGalleryImages()) return undefined;
+
     const nextItem = galleryItems[(activeIndex + 1) % galleryItems.length];
     if (loadedImages.has(nextItem.src)) return undefined;
 
