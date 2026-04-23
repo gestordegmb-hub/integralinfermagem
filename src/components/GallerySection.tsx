@@ -200,7 +200,7 @@ const GallerySection = () => {
               setTouchStart(null);
             }}
           >
-            <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-xl bg-muted/30 sm:aspect-[16/10] lg:aspect-[16/9]">
+            <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden sm:aspect-[16/10] lg:aspect-[16/9]">
               <AnimatePresence>
                 {isCarouselFocused && (
                   <motion.div
