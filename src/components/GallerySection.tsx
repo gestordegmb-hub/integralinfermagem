@@ -139,14 +139,17 @@ const GallerySection = () => {
               if (event.key === "ArrowLeft") {
                 event.preventDefault();
                 goToPrevious();
+                window.requestAnimationFrame(() => carouselRef.current?.focus());
               }
               if (event.key === "ArrowRight") {
                 event.preventDefault();
                 goToNext();
+                window.requestAnimationFrame(() => carouselRef.current?.focus());
               }
               if (event.key === " ") {
                 event.preventDefault();
                 setIsAutoplayEnabled((current) => !current);
+                window.requestAnimationFrame(() => carouselRef.current?.focus());
               }
             }}
             onTouchStart={(event) => setTouchStart(event.touches[0].clientX)}
@@ -237,7 +240,11 @@ const GallerySection = () => {
               <button
                 key={item.label}
                 type="button"
-                onClick={() => setActiveIndex(index)}
+                tabIndex={-1}
+                onClick={() => {
+                  setActiveIndex(index);
+                  carouselRef.current?.focus();
+                }}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
                   index === activeIndex ? "w-8 bg-gold" : "w-2.5 bg-border hover:bg-gold/50"
                 }`}
