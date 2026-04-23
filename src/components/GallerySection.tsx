@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
@@ -25,6 +25,7 @@ const galleryItems = [
 ];
 
 const GallerySection = () => {
+  const carouselRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(() => new Set());
@@ -113,7 +114,8 @@ const GallerySection = () => {
           className="mx-auto max-w-5xl"
         >
           <div
-            className="group relative overflow-hidden rounded-2xl bg-card p-3 shadow-[0_18px_60px_-24px_hsl(var(--foreground)/0.28)] outline-none ring-offset-4 ring-offset-background transition-shadow focus-visible:ring-2 focus-visible:ring-gold sm:p-4"
+            ref={carouselRef}
+            className="group relative overflow-hidden rounded-2xl bg-card p-3 shadow-[0_18px_60px_-24px_hsl(var(--foreground)/0.28)] outline-none ring-offset-4 ring-offset-background transition-all duration-300 focus-visible:ring-2 focus-visible:ring-gold focus-visible:shadow-[0_22px_70px_-22px_hsl(var(--gold)/0.42)] sm:p-4"
             tabIndex={0}
             role="region"
             aria-label="Carrossel da galeria"
@@ -167,8 +169,12 @@ const GallerySection = () => {
 
               <button
                 type="button"
-                onClick={goToPrevious}
-                className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-background/90 text-gold opacity-0 shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-gold hover:text-gold-foreground group-hover:opacity-100 sm:left-5 sm:h-12 sm:w-12"
+                tabIndex={-1}
+                onClick={() => {
+                  goToPrevious();
+                  carouselRef.current?.focus();
+                }}
+                className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-background/90 text-gold opacity-0 shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-gold hover:text-gold-foreground group-focus-within:opacity-100 group-hover:opacity-100 sm:left-5 sm:h-12 sm:w-12"
                 aria-label="Imagem anterior"
               >
                 <ChevronLeft className="h-5 w-5" />
@@ -176,8 +182,12 @@ const GallerySection = () => {
 
               <button
                 type="button"
-                onClick={goToNext}
-                className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-background/90 text-gold opacity-0 shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-gold hover:text-gold-foreground group-hover:opacity-100 sm:right-5 sm:h-12 sm:w-12"
+                tabIndex={-1}
+                onClick={() => {
+                  goToNext();
+                  carouselRef.current?.focus();
+                }}
+                className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-background/90 text-gold opacity-0 shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-gold hover:text-gold-foreground group-focus-within:opacity-100 group-hover:opacity-100 sm:right-5 sm:h-12 sm:w-12"
                 aria-label="Próxima imagem"
               >
                 <ChevronRight className="h-5 w-5" />
@@ -185,8 +195,12 @@ const GallerySection = () => {
 
               <button
                 type="button"
-                onClick={() => setIsAutoplayEnabled((current) => !current)}
-                className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-background/90 text-gold opacity-0 shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-gold hover:text-gold-foreground group-hover:opacity-100 sm:right-5 sm:top-5 sm:h-11 sm:w-11"
+                tabIndex={-1}
+                onClick={() => {
+                  setIsAutoplayEnabled((current) => !current);
+                  carouselRef.current?.focus();
+                }}
+                className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-background/90 text-gold opacity-0 shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-gold hover:text-gold-foreground group-focus-within:opacity-100 group-hover:opacity-100 sm:right-5 sm:top-5 sm:h-11 sm:w-11"
                 aria-label={isAutoplayEnabled ? "Pausar autoplay" : "Ativar autoplay"}
                 aria-pressed={!isAutoplayEnabled}
               >
