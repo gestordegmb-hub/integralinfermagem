@@ -1,38 +1,58 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import { BadgeCheck, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
     name: "Vinicius Alves Araújo",
+    initials: "VA",
     role: "Paciente — Tratamento de Feridas",
     text: "Simplesmente perfeito o trabalho de vocês. Meu filho chegou com uma lesão profunda e hoje está super bem. Profissionalismo e carinho em cada atendimento.",
   },
   {
     name: "Monique Fernandes Torres",
+    initials: "MF",
     role: "Paciente — Estomia",
     text: "Profissionais super habilitadas, atenciosas e atualizadas. O melhor consultório de enfermagem da Região dos Lagos. Recomendo de olhos fechados.",
   },
   {
     name: "Janaína Martins Rocha",
+    initials: "JM",
     role: "Paciente — Laserterapia",
     text: "Atendimento de excelência e olhar atento às necessidades de cada paciente. Recursos como ozônio e laser que aceleram o tratamento de forma impressionante.",
   },
   {
     name: "Fabio Dalanhese",
+    initials: "FD",
     role: "Paciente — Tratamento Avançado",
     text: "Fomos muito bem acolhidos, o tratamento prescrito para minha tia com alta tecnologia. Equipe extremamente profissional e dedicada. Recomendo!",
   },
 ];
 
-const TestimonialsSection = () => {
-  const [current, setCurrent] = useState(0);
+const GoogleIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 shrink-0">
+    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+    <path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l3.66-2.84z" />
+    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06L5.84 9.9C6.71 7.31 9.14 5.38 12 5.38z" />
+  </svg>
+);
 
-  const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
-  const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+const TestimonialsSection = () => {
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "prev" | "next") => {
+    const carousel = carouselRef.current;
+
+    if (!carousel) return;
+
+    const cardWidth = carousel.querySelector<HTMLElement>("[data-testimonial-card]")?.offsetWidth ?? carousel.clientWidth;
+    const gap = 24;
+    carousel.scrollBy({ left: direction === "next" ? cardWidth + gap : -(cardWidth + gap), behavior: "smooth" });
+  };
 
   return (
-    <section id="depoimentos" className="py-16 sm:py-24 lg:py-32">
+    <section id="depoimentos" className="bg-background py-16 sm:py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,62 +66,75 @@ const TestimonialsSection = () => {
           <div className="premium-divider" />
         </motion.div>
 
-        {/* Carousel */}
-        <div className="max-w-3xl mx-auto relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.5 }}
-              className="text-center px-8 sm:px-16"
-            >
-              <div className="flex justify-center gap-1.5 mb-8">
-                {Array.from({ length: 5 }).map((_, j) => (
-                  <Star key={j} className="w-5 h-5 fill-gold text-gold" />
-                ))}
-              </div>
-              <p className="text-lg sm:text-xl lg:text-2xl text-foreground leading-[1.7] font-serif italic mb-10">
-                "{testimonials[current].text}"
-              </p>
-              <div className="flex flex-col items-center">
-                <p className="font-semibold text-base text-foreground font-sans">{testimonials[current].name}</p>
-                <p className="text-[12px] text-muted-foreground mt-1.5 uppercase tracking-[0.1em] font-sans">{testimonials[current].role}</p>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="relative mx-auto max-w-6xl"
+        >
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-background to-transparent sm:w-16" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-background to-transparent sm:w-16" />
 
-          {/* Controls */}
-          <button
-            onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gold/10 hover:bg-gold/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
-            aria-label="Anterior"
+          <div
+            ref={carouselRef}
+            className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-1 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            aria-label="Carrossel de depoimentos"
           >
-            <ChevronLeft className="w-5 h-5 text-gold" />
-          </button>
-          <button
-            onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gold/10 hover:bg-gold/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
-            aria-label="Próximo"
-          >
-            <ChevronRight className="w-5 h-5 text-gold" />
-          </button>
+            {testimonials.map((testimonial) => (
+              <article
+                key={testimonial.name}
+                data-testimonial-card
+                className="flex min-h-[320px] min-w-full snap-start flex-col rounded-2xl border border-border/60 bg-card p-6 shadow-[0_18px_45px_-30px_hsl(var(--foreground)/0.45)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-32px_hsl(var(--foreground)/0.55)] sm:min-w-[calc((100%-1.5rem)/2)] lg:min-w-[calc((100%-3rem)/3)]"
+              >
+                <div className="mb-5 flex items-start justify-between gap-4">
+                  <div className="flex min-w-0 items-center gap-3.5">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary shadow-inner">
+                      {testimonial.initials}
+                    </div>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-1.5">
+                        <h3 className="truncate font-sans text-sm font-semibold text-card-foreground sm:text-base">
+                          {testimonial.name}
+                        </h3>
+                        <BadgeCheck className="h-4 w-4 shrink-0 fill-primary text-primary-foreground" />
+                      </div>
+                      <p className="mt-1 truncate text-[11px] uppercase tracking-[0.1em] text-muted-foreground">
+                        {testimonial.role}
+                      </p>
+                    </div>
+                  </div>
+                  <GoogleIcon />
+                </div>
 
-          {/* Dots */}
-          <div className="flex justify-center gap-2.5 mt-10">
-            {testimonials.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  i === current ? "bg-gold w-7" : "bg-border w-2 hover:bg-muted-foreground/30"
-                }`}
-                aria-label={`Depoimento ${i + 1}`}
-              />
+                <div className="mb-5 flex gap-1">
+                  {Array.from({ length: 5 }).map((_, j) => (
+                    <Star key={j} className="h-4 w-4 fill-gold text-gold" />
+                  ))}
+                </div>
+
+                <p className="flex-1 text-[15px] leading-relaxed text-muted-foreground">
+                  “{testimonial.text}”
+                </p>
+              </article>
             ))}
           </div>
-        </div>
+
+          <button
+            onClick={() => scroll("prev")}
+            className="absolute left-2 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-card text-gold shadow-[0_14px_35px_-18px_hsl(var(--foreground)/0.55)] transition-all duration-300 hover:scale-105 hover:bg-secondary sm:-left-5 sm:h-12 sm:w-12"
+            aria-label="Anterior"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            onClick={() => scroll("next")}
+            className="absolute right-2 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-card text-gold shadow-[0_14px_35px_-18px_hsl(var(--foreground)/0.55)] transition-all duration-300 hover:scale-105 hover:bg-secondary sm:-right-5 sm:h-12 sm:w-12"
+            aria-label="Próximo"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </motion.div>
       </div>
     </section>
   );
