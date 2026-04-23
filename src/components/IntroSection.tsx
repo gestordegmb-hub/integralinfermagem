@@ -60,9 +60,7 @@ const IntroSection = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="section-desc text-center max-w-2xl mx-auto mb-16 sm:mb-20"
         >
-          Referência em enfermagem avançada na Região dos Lagos. Oferecemos cuidados
-          especializados, tecnologia e acompanhamento personalizado com a mais alta
-          qualidade técnica e humana.
+          Cuidado especializado, tecnologia e acompanhamento individualizado para promover qualidade de vida e evolução na cicatrização.
         </motion.p>
 
         {/* Feature Cards */}
