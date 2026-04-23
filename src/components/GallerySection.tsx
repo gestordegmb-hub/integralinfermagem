@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
+import { cn } from "@/lib/utils";
 import ozoneTherapyImage from "@/assets/gallery-ozonioterapia.png";
 import laserTherapyImage from "@/assets/gallery-laserterapia.jpg";
 import regenerativeTherapyImage from "@/assets/gallery-terapia-regenerativa-prf.jpg";
@@ -23,6 +24,14 @@ const galleryItems = [
     label: "Terapia Regenerativa (PRF)",
   },
 ];
+
+const frameClassBlocklist = /(^|:)(border($|-)|shadow($|-)|rounded($|-)|p[trblxy]?-)/;
+
+export const galleryFrameClassName = (...classes: Parameters<typeof cn>) =>
+  cn(...classes)
+    .split(/\s+/)
+    .filter((className) => className && !frameClassBlocklist.test(className))
+    .join(" ");
 
 const canPreloadGalleryImages = () => {
   if (typeof navigator === "undefined") return false;
@@ -141,7 +150,9 @@ const GallerySection = () => {
           <div
             ref={carouselRef}
             id="gallery-carousel"
-            className="group relative touch-pan-y outline-none ring-offset-4 ring-offset-background transition-all duration-300 focus-visible:ring-2 focus-visible:ring-gold"
+            className={galleryFrameClassName(
+              "group relative touch-pan-y outline-none ring-offset-4 ring-offset-background transition-all duration-300 focus-visible:ring-2 focus-visible:ring-gold",
+            )}
             tabIndex={0}
             role="region"
             aria-label="Carrossel da galeria"
