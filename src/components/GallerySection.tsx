@@ -68,8 +68,8 @@ const GallerySection = () => {
       return () => window.cancelIdleCallback(idleId);
     }
 
-    const timeoutId = window.setTimeout(preloadNextImage, 350);
-    return () => window.clearTimeout(timeoutId);
+    const timeoutId = globalThis.setTimeout(preloadNextImage, 350);
+    return () => globalThis.clearTimeout(timeoutId);
   }, [activeIndex, loadedImages]);
 
   const activeItem = galleryItems[activeIndex];
