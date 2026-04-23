@@ -240,7 +240,7 @@ const GallerySection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.985 }}
                   transition={{ duration: 0.55, ease: "easeOut" }}
-                  className={`block h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025] ${
+                  className={`block h-full w-full object-contain transition-transform duration-700 ${
                     isActiveImageLoaded ? "blur-0" : "blur-xl"
                   }`}
                   loading={activeIndex === 0 ? "eager" : "lazy"}
