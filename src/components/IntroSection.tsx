@@ -48,8 +48,8 @@ const IntroSection = () => {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="section-title text-center max-w-3xl mx-auto"
         >
-          Cuidado Especializado com{" "}
-          <span className="text-gold">Excelência</span>
+          Tratamento avançado de feridas e cuidados com estomias em{" "}
+          <span className="text-gold">Cabo Frio</span>
         </motion.h2>
 
         {/* Subtitle */}
