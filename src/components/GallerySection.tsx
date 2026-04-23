@@ -41,6 +41,7 @@ const GallerySection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(() => new Set());
+  const [isCarouselFocused, setIsCarouselFocused] = useState(false);
   const [isAutoplayEnabled, setIsAutoplayEnabled] = useState(() => {
     if (typeof window === "undefined") return true;
     return window.localStorage.getItem("galleryAutoplay") !== "paused";
@@ -136,6 +137,8 @@ const GallerySection = () => {
             tabIndex={0}
             role="region"
             aria-label="Carrossel da galeria"
+            onFocus={() => setIsCarouselFocused(true)}
+            onBlur={() => setIsCarouselFocused(false)}
             onKeyDown={(event) => {
               if (event.key === "ArrowLeft") {
                 event.preventDefault();
@@ -165,6 +168,19 @@ const GallerySection = () => {
             }}
           >
             <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-xl bg-muted/30 sm:aspect-[16/10] lg:aspect-[16/9]">
+              <AnimatePresence>
+                {isCarouselFocused && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.25 }}
+                    className="absolute left-3 top-3 z-20 rounded-full bg-background/90 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.12em] text-foreground shadow-lg backdrop-blur-sm sm:left-5 sm:top-5"
+                  >
+                    Use as setas para navegar
+                  </motion.div>
+                )}
+              </AnimatePresence>
               <div
                 className={`absolute inset-0 bg-muted/60 transition-opacity duration-500 ${
                   isActiveImageLoaded ? "opacity-0" : "opacity-100 animate-pulse"
