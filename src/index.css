@@ -59,6 +59,7 @@
     @apply bg-background text-foreground antialiased;
     font-family: 'DM Sans', system-ui, sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -70,7 +71,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     font-weight: 600;
     line-height: 1.2;
   }
@@ -86,19 +87,19 @@
 
 @layer components {
   .section-label {
-    @apply font-medium text-[11px] sm:text-[12px] uppercase tracking-[0.2em];
+    @apply font-medium text-[10px] sm:text-[12px] uppercase tracking-[0.18em] sm:tracking-[0.2em];
     font-family: 'DM Sans', sans-serif;
     color: hsl(var(--gold));
   }
 
   .section-title {
-    @apply text-[32px] sm:text-[40px] md:text-[3rem] lg:text-[3.5rem] font-bold mt-4 mb-5 text-foreground;
-    line-height: 1.12;
+    @apply text-[30px] sm:text-[40px] md:text-[3rem] lg:text-[3.375rem] font-bold mt-4 mb-5 text-foreground;
+    line-height: 1.08;
     font-style: italic;
   }
 
   .section-desc {
-    @apply text-[15px] sm:text-base text-muted-foreground max-w-lg mx-auto;
+    @apply text-[15px] sm:text-base text-muted-foreground max-w-2xl mx-auto;
     font-family: 'DM Sans', sans-serif;
     line-height: 1.65;
   }

@@ -91,7 +91,7 @@ const services: Service[] = [
 
 const SpecialtiesSection = () => {
   return (
-    <section id="especialidades" className="py-16 sm:py-24 lg:py-32 bg-muted/40">
+    <section id="especialidades" className="py-16 sm:py-24 lg:py-28 bg-muted/40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ const SpecialtiesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6 lg:gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-5 sm:gap-6">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -116,12 +116,12 @@ const SpecialtiesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07, duration: 0.5 }}
-              className="group bg-card rounded-2xl border border-border/50 p-7 sm:p-8 text-center transition-all duration-500 hover:shadow-[0_16px_48px_-12px_rgba(0,0,0,0.10)] hover:-translate-y-1 hover:border-[hsl(var(--gold)/0.3)]"
+              className="group bg-card rounded-md border border-border/50 p-6 text-center transition-all duration-500 hover:shadow-[0_16px_48px_-12px_hsl(var(--foreground)/0.14)] hover:-translate-y-1 hover:border-[hsl(var(--gold)/0.3)]"
             >
               <div className="flex justify-center">
                 <ServiceIcon title={s.title} imageSrc={s.imageIcon}>{s.icon}</ServiceIcon>
               </div>
-              <h3 className="font-semibold text-lg sm:text-xl text-foreground font-serif mb-3 leading-tight">
+              <h3 className="font-semibold text-lg text-foreground font-serif mb-3 leading-tight min-h-[2.6em] flex items-center justify-center">
                 {s.title}
               </h3>
               <p className="text-[13px] sm:text-[14px] text-muted-foreground leading-relaxed font-sans">
