@@ -18,7 +18,7 @@ const WhatsAppButton = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
-          className="fixed bottom-6 right-6 z-50"
+          className="fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6"
         >
           {/* Tooltip */}
           <AnimatePresence>
@@ -38,7 +38,7 @@ const WhatsAppButton = () => {
             href="https://wa.me/5522974017588?text=Olá! Gostaria de agendar uma consulta na Integral Clínica."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-[60px] h-[60px] rounded-full bg-[hsl(142,70%,42%)] text-white shadow-xl shadow-black/15 hover:shadow-2xl hover:scale-110 transition-all duration-500 flex items-center justify-center animate-pulse-soft"
+            className="flex h-14 w-14 items-center justify-center rounded-full bg-[hsl(142,70%,42%)] text-white shadow-xl shadow-black/15 transition-all duration-500 hover:scale-110 hover:shadow-2xl sm:h-[60px] sm:w-[60px]"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             aria-label="Falar no WhatsApp"
