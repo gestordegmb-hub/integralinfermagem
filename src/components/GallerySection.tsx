@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import ozoneTherapyImage from "@/assets/gallery-ozonioterapia.png";
@@ -51,10 +51,6 @@ const GallerySection = () => {
   const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number } | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(() => new Set());
   const [isCarouselFocused, setIsCarouselFocused] = useState(false);
-  const [isAutoplayEnabled, setIsAutoplayEnabled] = useState(() => {
-    if (typeof window === "undefined") return true;
-    return window.localStorage.getItem("galleryAutoplay") !== "paused";
-  });
   const lastSwipeTime = useRef<number>(0);
   const lastSwipeCooldown = useRef<number>(400);
   const getSwipeCooldown = (distance: number, duration: number) => {
@@ -72,15 +68,6 @@ const GallerySection = () => {
     setActiveIndex((current) => (current === galleryItems.length - 1 ? 0 : current + 1));
   };
 
-  useEffect(() => {
-    if (!isAutoplayEnabled) return undefined;
-    const interval = window.setInterval(goToNext, 6500);
-    return () => window.clearInterval(interval);
-  }, [isAutoplayEnabled]);
-
-  useEffect(() => {
-    window.localStorage.setItem("galleryAutoplay", isAutoplayEnabled ? "playing" : "paused");
-  }, [isAutoplayEnabled]);
 
   useEffect(() => {
     if (!canPreloadGalleryImages()) return undefined;
@@ -167,11 +154,6 @@ const GallerySection = () => {
               if (event.key === "ArrowRight") {
                 event.preventDefault();
                 goToNext();
-                window.requestAnimationFrame(() => carouselRef.current?.focus());
-              }
-              if (event.key === " ") {
-                event.preventDefault();
-                setIsAutoplayEnabled((current) => !current);
                 window.requestAnimationFrame(() => carouselRef.current?.focus());
               }
             }}
@@ -274,20 +256,6 @@ const GallerySection = () => {
                 aria-label="Próxima imagem"
               >
                 <ChevronRight className="h-5 w-5" />
-              </button>
-
-              <button
-                type="button"
-                tabIndex={-1}
-                onClick={() => {
-                  setIsAutoplayEnabled((current) => !current);
-                  carouselRef.current?.focus();
-                }}
-                className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-background/90 text-gold opacity-0 shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-gold hover:text-gold-foreground group-focus-within:opacity-100 group-hover:opacity-100 sm:right-5 sm:top-5 sm:h-11 sm:w-11"
-                aria-label={isAutoplayEnabled ? "Pausar autoplay" : "Ativar autoplay"}
-                aria-pressed={!isAutoplayEnabled}
-              >
-                {isAutoplayEnabled ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 fill-current" />}
               </button>
 
               <figcaption className="absolute bottom-0 left-0 right-0 p-5 text-center sm:p-7">
