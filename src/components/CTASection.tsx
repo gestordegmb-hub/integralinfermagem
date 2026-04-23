@@ -47,19 +47,20 @@ const CTASection = () => {
               href="https://wa.me/5522974017588?text=Olá! Gostaria de agendar uma consulta na Integral Clínica."
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full sm:w-auto"
             >
-              <Button variant="hero" size="lg" className="gap-2.5 px-5 sm:px-10 h-[52px] w-full sm:w-auto uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] hover:scale-105">
-                <MessageCircle className="w-[18px] h-[18px]" />
+              <Button variant="hero" size="lg" className="gap-2.5 px-5 sm:px-10 h-[52px] w-full uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] hover:scale-105">
+                <MessageCircle className="w-[18px] h-[18px] shrink-0" />
                 Agendar pelo WhatsApp
               </Button>
             </a>
-            <a href="tel:+5522974017588">
+            <a href="tel:+5522974017588" className="w-full sm:w-auto">
               <Button
                 variant="heroOutline"
                 size="lg"
-                className="gap-2.5 px-5 sm:px-10 h-[52px] w-full sm:w-auto uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em]"
+                className="gap-2.5 px-5 sm:px-10 h-[52px] w-full uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em]"
               >
-                <Phone className="w-[18px] h-[18px]" />
+                <Phone className="w-[18px] h-[18px] shrink-0" />
                 Ligar Agora
               </Button>
             </a>

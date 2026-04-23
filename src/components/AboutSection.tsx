@@ -21,11 +21,13 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="section-label">Sobre a Clínica</span>
-            <h2 className="section-title !text-left">
-              Uma Trajetória de Dedicação e Cuidado
-            </h2>
-            <div className="premium-divider !mx-0" />
+            <div className="text-center sm:text-left">
+              <span className="section-label">Sobre a Clínica</span>
+              <h2 className="section-title sm:!text-left">
+                Uma Trajetória de Dedicação e Cuidado
+              </h2>
+              <div className="premium-divider sm:!mx-0" />
+            </div>
 
             <div className="space-y-5 mt-7 sm:mt-8 max-w-2xl text-[15px] sm:text-base text-muted-foreground leading-[1.7] font-sans">
               <p>
