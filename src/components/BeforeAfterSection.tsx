@@ -149,8 +149,7 @@ const BeforeAfterSection = () => {
             Transformações que <br className="hidden sm:inline" />Mudam Vidas
           </h2>
           <p className="section-desc max-w-xl mx-auto">
-            Veja os resultados reais de nossos procedimentos especializados.
-            Cada caso é único, e cada resultado reflete nosso compromisso com a excelência.
+            Evolução real no cuidado de feridas, com abordagem especializada, tecnologias avançadas e acompanhamento em todas as etapas. Com foco é conduzir o processo de cicatrização, reduzir riscos de complicações e promover mais conforto, autonomia e qualidade de vida ao paciente.
           </p>
           <div className="premium-divider" />
         </motion.div>
