@@ -39,7 +39,7 @@ const canPreloadGalleryImages = () => {
 const GallerySection = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState<{ x: number; y: number } | null>(null);
+  const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number } | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(() => new Set());
   const [isCarouselFocused, setIsCarouselFocused] = useState(false);
   const [isAutoplayEnabled, setIsAutoplayEnabled] = useState(() => {
@@ -47,7 +47,13 @@ const GallerySection = () => {
     return window.localStorage.getItem("galleryAutoplay") !== "paused";
   });
   const lastSwipeTime = useRef<number>(0);
-  const SWIPE_COOLDOWN = 400;
+  const lastSwipeCooldown = useRef<number>(400);
+  const getSwipeCooldown = (distance: number, duration: number) => {
+    const velocity = Math.abs(distance) / Math.max(duration, 1);
+    if (velocity >= 1.2) return 220;
+    if (velocity >= 0.6) return 360;
+    return 560;
+  };
 
   const goToPrevious = () => {
     setActiveIndex((current) => (current === 0 ? galleryItems.length - 1 : current - 1));
@@ -162,12 +168,15 @@ const GallerySection = () => {
               setTouchStart({
                 x: event.touches[0].clientX,
                 y: event.touches[0].clientY,
+                time: Date.now(),
               });
             }}
             onTouchEnd={(event) => {
               if (touchStart === null) return;
+              const now = Date.now();
               const deltaX = touchStart.x - event.changedTouches[0].clientX;
               const deltaY = touchStart.y - event.changedTouches[0].clientY;
+              const duration = now - touchStart.time;
               const isMostlyVertical = Math.abs(deltaY) > Math.abs(deltaX) * 0.75;
 
               if (isMostlyVertical) {
@@ -175,8 +184,7 @@ const GallerySection = () => {
                 return;
               }
 
-              const now = Date.now();
-              if (now - lastSwipeTime.current < SWIPE_COOLDOWN) {
+              if (now - lastSwipeTime.current < lastSwipeCooldown.current) {
                 setTouchStart(null);
                 return;
               }
@@ -184,6 +192,7 @@ const GallerySection = () => {
               const carouselWidth = carouselRef.current?.offsetWidth ?? 0;
               const threshold = Math.max(45, carouselWidth * 0.15);
               if (Math.abs(deltaX) > threshold) {
+                lastSwipeCooldown.current = getSwipeCooldown(deltaX, duration);
                 lastSwipeTime.current = now;
                 deltaX > 0 ? goToNext() : goToPrevious();
                 window.requestAnimationFrame(() => carouselRef.current?.focus());
