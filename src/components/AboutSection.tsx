@@ -64,7 +64,7 @@ const AboutSection = () => {
                     Fundadora & Diretora Clínica
                   </p>
                   <p className="text-[14px] text-muted-foreground mt-3 leading-relaxed font-sans">
-                    Estomaterapeuta (UERJ), Podiatra, Speaker Coloplast. Mais de 15 anos de experiência em enfermagem especializada.
+                    Viviane Paz Torres é enfermeira, estomaterapeuta formada pela UERJ, enfermeira com habilitação em Podiatra e fundadora da Integral, Clínica de Enfermagem Especializada em Cabo Frio. Com mais de uma década de atuação na enfermagem, construiu sua trajetória com foco no tratamento de feridas, cuidado com pessoas com estomias e uso de tecnologias avançadas, unindo ciência, experiência e um olhar individualizado em cada atendimento. Também atua na formação de profissionais da saúde, é speaker da Coloplast na área de Ostomy Care e participou como coautora do Manual Clínico para Enfermeiros: Estomia de eliminação em pessoas adultas da Coloplast e do livro Gestão de Serviços de Atenção à Saúde da Pessoa com Estomia, contribuindo para o avanço da prática profissional. À frente da Integral, Viviane promove mais do que assistência, entrega qualidade de vida, autonomia e confiança para cada pessoa acompanhada.
                   </p>
                 </div>
               </div>
