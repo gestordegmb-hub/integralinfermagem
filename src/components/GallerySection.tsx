@@ -151,7 +151,7 @@ const GallerySection = () => {
             ref={carouselRef}
             id="gallery-carousel"
             className={galleryFrameClassName(
-              "group relative touch-pan-y outline-none ring-offset-4 ring-offset-background transition-all duration-300 focus-visible:ring-2 focus-visible:ring-gold",
+              "group relative touch-pan-y gap-0 outline-none ring-offset-4 ring-offset-background transition-all duration-300 focus-visible:ring-2 focus-visible:ring-gold",
             )}
             tabIndex={0}
             role="region"
@@ -211,7 +211,7 @@ const GallerySection = () => {
               setTouchStart(null);
             }}
           >
-            <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden sm:aspect-[16/10] lg:aspect-[16/9]">
+            <div className="relative flex aspect-[4/5] gap-0 items-center justify-center overflow-hidden sm:aspect-[16/10] lg:aspect-[16/9]">
               <AnimatePresence>
                 {isCarouselFocused && (
                   <motion.div
