@@ -4,26 +4,39 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import ozoneTherapyImage from "@/assets/gallery-ozonioterapia.png";
+import ozoneTherapy320 from "@/assets/gallery-ozonioterapia-320.webp";
+import ozoneTherapy377 from "@/assets/gallery-ozonioterapia-377.webp";
 import laserTherapyImage from "@/assets/gallery-laserterapia.jpg";
+import laserTherapy480 from "@/assets/gallery-laserterapia-480.webp";
+import laserTherapy768 from "@/assets/gallery-laserterapia-768.webp";
+import laserTherapy960 from "@/assets/gallery-laserterapia-960.webp";
 import regenerativeTherapyImage from "@/assets/gallery-terapia-regenerativa-prf.jpg";
+import regenerativeTherapy480 from "@/assets/gallery-terapia-regenerativa-prf-480.webp";
+import regenerativeTherapy768 from "@/assets/gallery-terapia-regenerativa-prf-768.webp";
+import regenerativeTherapy960 from "@/assets/gallery-terapia-regenerativa-prf-960.webp";
 
 const galleryItems = [
   {
     src: ozoneTherapyImage,
+    srcSet: `${ozoneTherapy320} 320w, ${ozoneTherapy377} 377w`,
     alt: "Aplicação de ozonioterapia na clínica Integral",
     label: "Ozonioterapia",
   },
   {
     src: laserTherapyImage,
+    srcSet: `${laserTherapy480} 480w, ${laserTherapy768} 768w, ${laserTherapy960} 960w`,
     alt: "Atendimento de laserterapia na clínica Integral",
     label: "Laserterapia",
   },
   {
     src: regenerativeTherapyImage,
+    srcSet: `${regenerativeTherapy480} 480w, ${regenerativeTherapy768} 768w, ${regenerativeTherapy960} 960w`,
     alt: "Atendimento de terapia regenerativa PRF na clínica Integral",
     label: "Terapia Regenerativa (PRF)",
   },
 ];
+
+const galleryImageSizes = "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)";
 
 const frameClassBlocklist = /(^|:)(border($|-)|shadow($|-)|rounded($|-)|p[trblxy]?-)/;
 
@@ -217,6 +230,8 @@ const GallerySection = () => {
                 <motion.img
                   key={activeItem.label}
                   src={activeItem.src}
+                  srcSet={activeItem.srcSet}
+                  sizes={galleryImageSizes}
                   alt={activeItem.alt}
                   initial={{ opacity: 0, scale: 1.015 }}
                   animate={{ opacity: 1, scale: 1 }}
