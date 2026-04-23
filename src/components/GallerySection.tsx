@@ -27,6 +27,7 @@ const galleryItems = [
 const GallerySection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(() => new Set());
   const [isAutoplayEnabled, setIsAutoplayEnabled] = useState(() => {
     if (typeof window === "undefined") return true;
     return window.localStorage.getItem("galleryAutoplay") !== "paused";
@@ -50,7 +51,29 @@ const GallerySection = () => {
     window.localStorage.setItem("galleryAutoplay", isAutoplayEnabled ? "playing" : "paused");
   }, [isAutoplayEnabled]);
 
+  useEffect(() => {
+    const nextItem = galleryItems[(activeIndex + 1) % galleryItems.length];
+    if (loadedImages.has(nextItem.src)) return undefined;
+
+    const preloadNextImage = () => {
+      const image = new Image();
+      image.src = nextItem.src;
+      image.onload = () => {
+        setLoadedImages((current) => new Set(current).add(nextItem.src));
+      };
+    };
+
+    if ("requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(preloadNextImage, { timeout: 2000 });
+      return () => window.cancelIdleCallback(idleId);
+    }
+
+    const timeoutId = globalThis.setTimeout(preloadNextImage, 350);
+    return () => globalThis.clearTimeout(timeoutId);
+  }, [activeIndex, loadedImages]);
+
   const activeItem = galleryItems[activeIndex];
+  const isActiveImageLoaded = loadedImages.has(activeItem.src);
 
   return (
     <section id="galeria" className="py-16 sm:py-20 lg:py-28 bg-background overflow-hidden">
@@ -90,6 +113,12 @@ const GallerySection = () => {
             }}
           >
             <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-xl bg-muted/30 sm:aspect-[16/10] lg:aspect-[16/9]">
+              <div
+                className={`absolute inset-0 bg-muted/60 transition-opacity duration-500 ${
+                  isActiveImageLoaded ? "opacity-0" : "opacity-100 animate-pulse"
+                }`}
+                aria-hidden="true"
+              />
               <AnimatePresence mode="wait">
                 <motion.img
                   key={activeItem.label}
@@ -99,8 +128,11 @@ const GallerySection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.985 }}
                   transition={{ duration: 0.55, ease: "easeOut" }}
-                  className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.025]"
+                  className={`h-full w-full object-contain transition-all duration-700 group-hover:scale-[1.025] ${
+                    isActiveImageLoaded ? "blur-0" : "blur-xl"
+                  }`}
                   loading={activeIndex === 0 ? "eager" : "lazy"}
+                  onLoad={() => setLoadedImages((current) => new Set(current).add(activeItem.src))}
                 />
               </AnimatePresence>
 
