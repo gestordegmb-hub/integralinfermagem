@@ -103,7 +103,24 @@ const GallerySection = () => {
           className="mx-auto max-w-5xl"
         >
           <div
-            className="group relative overflow-hidden rounded-2xl bg-card p-3 shadow-[0_18px_60px_-24px_hsl(var(--foreground)/0.28)] sm:p-4"
+            className="group relative overflow-hidden rounded-2xl bg-card p-3 shadow-[0_18px_60px_-24px_hsl(var(--foreground)/0.28)] outline-none ring-offset-4 ring-offset-background transition-shadow focus-visible:ring-2 focus-visible:ring-gold sm:p-4"
+            tabIndex={0}
+            role="region"
+            aria-label="Carrossel da galeria"
+            onKeyDown={(event) => {
+              if (event.key === "ArrowLeft") {
+                event.preventDefault();
+                goToPrevious();
+              }
+              if (event.key === "ArrowRight") {
+                event.preventDefault();
+                goToNext();
+              }
+              if (event.key === " ") {
+                event.preventDefault();
+                setIsAutoplayEnabled((current) => !current);
+              }
+            }}
             onTouchStart={(event) => setTouchStart(event.touches[0].clientX)}
             onTouchEnd={(event) => {
               if (touchStart === null) return;
