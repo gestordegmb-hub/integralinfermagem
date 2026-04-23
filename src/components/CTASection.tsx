@@ -48,7 +48,7 @@ const CTASection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="hero" size="lg" className="gap-2.5 px-10 h-[52px] w-full sm:w-auto uppercase text-[13px] tracking-[0.12em] hover:scale-105">
+              <Button variant="hero" size="lg" className="gap-2.5 px-5 sm:px-10 h-[52px] w-full sm:w-auto uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] hover:scale-105">
                 <MessageCircle className="w-[18px] h-[18px]" />
                 Agendar pelo WhatsApp
               </Button>
@@ -57,7 +57,7 @@ const CTASection = () => {
               <Button
                 variant="heroOutline"
                 size="lg"
-                className="gap-2.5 px-10 h-[52px] w-full sm:w-auto uppercase text-[13px] tracking-[0.12em]"
+                className="gap-2.5 px-5 sm:px-10 h-[52px] w-full sm:w-auto uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em]"
               >
                 <Phone className="w-[18px] h-[18px]" />
                 Ligar Agora

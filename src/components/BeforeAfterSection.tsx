@@ -57,7 +57,7 @@ function ImageSlider({ beforeSrc, afterSrc, title }: { beforeSrc: string; afterS
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[480px] mx-auto aspect-[9/16] max-h-[640px] rounded overflow-hidden shadow-lg cursor-col-resize select-none"
+      className="relative w-full max-w-[480px] mx-auto aspect-[9/16] max-h-[min(640px,78vh)] rounded overflow-hidden shadow-lg cursor-col-resize select-none"
       onMouseMove={handleMouseMove}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
@@ -225,7 +225,7 @@ const BeforeAfterSection = () => {
           <Button
             variant="gold"
             size="lg"
-            className="gap-2"
+            className="w-full max-w-[260px] gap-2"
             onClick={() => {
               const el = document.getElementById("agendamento");
               el?.scrollIntoView({ behavior: "smooth" });

@@ -63,7 +63,7 @@ const SchedulingSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <form onSubmit={handleSubmit} className="premium-card p-7 sm:p-9 space-y-5">
+            <form onSubmit={handleSubmit} className="premium-card p-5 sm:p-9 space-y-5">
               <div>
                 <label className="block text-[12px] font-medium text-foreground mb-2.5 uppercase tracking-[0.12em] font-sans">Nome completo *</label>
                 <input type="text" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className={inputClass} placeholder="Seu nome" />
@@ -91,7 +91,7 @@ const SchedulingSection = () => {
                 <label className="block text-[12px] font-medium text-foreground mb-2.5 uppercase tracking-[0.12em] font-sans">Mensagem</label>
                 <textarea rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className={`${inputClass} resize-none`} placeholder="Conte-nos como podemos ajudar..." />
               </div>
-              <Button variant="gold" size="lg" type="submit" className="w-full gap-2 uppercase text-[13px] tracking-[0.12em] h-[52px] hover:scale-[1.02]">
+              <Button variant="gold" size="lg" type="submit" className="w-full gap-2 uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] h-[52px] hover:scale-[1.02]">
                 <MessageCircle className="w-4 h-4" />
                 Enviar Mensagem via WhatsApp
               </Button>
@@ -110,18 +110,18 @@ const SchedulingSection = () => {
             className="space-y-5"
           >
             {contactInfo.map((c) => (
-              <div key={c.label} className="flex items-start gap-4 p-5 sm:p-6 rounded-md bg-muted/50 border border-border/30">
+              <div key={c.label} className="flex items-start gap-3 sm:gap-4 p-5 sm:p-6 rounded-md bg-muted/50 border border-border/30">
                 <div className="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
                   <c.icon className="w-5 h-5 text-gold" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.12em] gold-text font-medium font-sans mb-1.5">{c.label}</p>
                   {c.href ? (
                     <a href={c.href} target="_blank" rel="noopener noreferrer" className="text-[15px] sm:text-base text-foreground hover:text-gold transition-colors font-sans font-medium">
                       {c.value}
                     </a>
                   ) : (
-                    <p className="text-[15px] sm:text-base text-foreground font-sans">{c.value}</p>
+                    <p className="text-[15px] sm:text-base text-foreground font-sans leading-relaxed">{c.value}</p>
                   )}
                 </div>
               </div>
