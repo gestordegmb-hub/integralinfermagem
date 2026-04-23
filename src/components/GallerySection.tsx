@@ -160,7 +160,8 @@ const GallerySection = () => {
             onTouchEnd={(event) => {
               if (touchStart === null) return;
               const distance = touchStart - event.changedTouches[0].clientX;
-              if (Math.abs(distance) > 45) {
+              // Aumentado threshold para 80px para evitar trocas acidentais
+              if (Math.abs(distance) > 80) {
                 distance > 0 ? goToNext() : goToPrevious();
                 window.requestAnimationFrame(() => carouselRef.current?.focus());
               }
