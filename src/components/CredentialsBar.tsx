@@ -10,7 +10,7 @@ const credentials = [
 
 const CredentialsBar = () => {
   return (
-    <section className="bg-primary py-5 sm:py-6">
+    <section className="py-5 sm:py-6" style={{ backgroundColor: '#055F57' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
           {credentials.map((c, i) => (
