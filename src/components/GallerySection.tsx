@@ -43,7 +43,7 @@ const GallerySection = () => {
           <div className="premium-divider" />
         </motion.div>
 
-        <div className="grid gap-4 sm:gap-5 lg:grid-cols-3">
+        <div className="grid gap-5 sm:gap-6 lg:grid-cols-3">
           {galleryItems.map((item, index) => (
             <motion.figure
               key={item.label}
@@ -51,21 +51,21 @@ const GallerySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: index * 0.1 }}
-              className="group relative min-h-[360px] overflow-hidden rounded-md bg-muted/30 shadow-sm sm:min-h-[430px] lg:min-h-[520px]"
+              className="group bg-card rounded-2xl p-3 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_16px_48px_-12px_rgba(0,0,0,0.10)] sm:p-4"
             >
-              <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
+              <div className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-xl bg-muted/30">
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                  className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                   loading="lazy"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/70 via-secondary/10 to-transparent" />
-              <figcaption className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
-                <span className="font-serif text-2xl italic leading-tight text-secondary-foreground drop-shadow-sm sm:text-3xl">
+              <figcaption className="px-2 py-5 text-center sm:py-6">
+                <span className="mx-auto mb-4 block h-px w-10 bg-gold" />
+                <h3 className="font-serif text-2xl font-semibold italic leading-tight text-foreground sm:text-[1.7rem]">
                   {item.label}
-                </span>
+                </h3>
               </figcaption>
             </motion.figure>
           ))}
