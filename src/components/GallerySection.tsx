@@ -52,6 +52,16 @@ const GallerySection = () => {
   }, [isAutoplayEnabled]);
 
   useEffect(() => {
+    galleryItems.slice(0, 2).forEach((item) => {
+      const image = new Image();
+      image.src = item.src;
+      image.onload = () => {
+        setLoadedImages((current) => new Set(current).add(item.src));
+      };
+    });
+  }, []);
+
+  useEffect(() => {
     const nextItem = galleryItems[(activeIndex + 1) % galleryItems.length];
     if (loadedImages.has(nextItem.src)) return undefined;
 
