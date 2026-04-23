@@ -18,20 +18,25 @@ import regenerativeTherapy960 from "@/assets/gallery-terapia-regenerativa-prf-96
 const galleryItems = [
   {
     src: ozoneTherapyImage,
+    srcSet: `${ozoneTherapy320} 320w, ${ozoneTherapy377} 377w`,
     alt: "Aplicação de ozonioterapia na clínica Integral",
     label: "Ozonioterapia",
   },
   {
     src: laserTherapyImage,
+    srcSet: `${laserTherapy480} 480w, ${laserTherapy768} 768w, ${laserTherapy960} 960w`,
     alt: "Atendimento de laserterapia na clínica Integral",
     label: "Laserterapia",
   },
   {
     src: regenerativeTherapyImage,
+    srcSet: `${regenerativeTherapy480} 480w, ${regenerativeTherapy768} 768w, ${regenerativeTherapy960} 960w`,
     alt: "Atendimento de terapia regenerativa PRF na clínica Integral",
     label: "Terapia Regenerativa (PRF)",
   },
 ];
+
+const galleryImageSizes = "(min-width: 1024px) 960px, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)";
 
 const frameClassBlocklist = /(^|:)(border($|-)|shadow($|-)|rounded($|-)|p[trblxy]?-)/;
 
