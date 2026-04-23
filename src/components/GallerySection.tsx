@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
 import ozoneTherapyImage from "@/assets/gallery-ozonioterapia.png";
 import laserTherapyImage from "@/assets/gallery-laserterapia.jpg";
@@ -27,6 +27,10 @@ const galleryItems = [
 const GallerySection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [isAutoplayEnabled, setIsAutoplayEnabled] = useState(() => {
+    if (typeof window === "undefined") return true;
+    return window.localStorage.getItem("galleryAutoplay") !== "paused";
+  });
 
   const goToPrevious = () => {
     setActiveIndex((current) => (current === 0 ? galleryItems.length - 1 : current - 1));
@@ -37,9 +41,14 @@ const GallerySection = () => {
   };
 
   useEffect(() => {
+    if (!isAutoplayEnabled) return undefined;
     const interval = window.setInterval(goToNext, 6500);
     return () => window.clearInterval(interval);
-  }, []);
+  }, [isAutoplayEnabled]);
+
+  useEffect(() => {
+    window.localStorage.setItem("galleryAutoplay", isAutoplayEnabled ? "playing" : "paused");
+  }, [isAutoplayEnabled]);
 
   const activeItem = galleryItems[activeIndex];
 
@@ -113,6 +122,16 @@ const GallerySection = () => {
                 aria-label="Próxima imagem"
               >
                 <ChevronRight className="h-5 w-5" />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setIsAutoplayEnabled((current) => !current)}
+                className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-background/90 text-gold opacity-0 shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-gold hover:text-gold-foreground group-hover:opacity-100 sm:right-5 sm:top-5 sm:h-11 sm:w-11"
+                aria-label={isAutoplayEnabled ? "Pausar autoplay" : "Ativar autoplay"}
+                aria-pressed={!isAutoplayEnabled}
+              >
+                {isAutoplayEnabled ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 fill-current" />}
               </button>
 
               <figcaption className="absolute bottom-0 left-0 right-0 p-5 text-center sm:p-7">
