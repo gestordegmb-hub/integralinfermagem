@@ -30,12 +30,22 @@ const AboutSection = () => {
             <div className="space-y-5 mt-8 text-[15px] sm:text-base text-muted-foreground leading-[1.7] font-sans">
               <p>
                 A Integral Clínica de Enfermagem Especializada nasceu da experiência prática e do compromisso com um
-                cuidado mais humano. Localizada em Cabo Frio, é referência na Região dos Lagos no tratamento avançado
-                de feridas e cuidados especializados.
+                cuidado mais humano, resolutivo e especializado no tratamento de feridas. Localizada em Cabo Frio, a
+                clínica se consolidou como referência na Região dos Lagos por unir conhecimento técnico, tecnologia e
+                um olhar individualizado para cada pessoa.
               </p>
               <p>
-                Fundada pela Enf.ª Viviane Paz Torres, estomaterapeuta e podiatra, a clínica combina expertise clínica
-                com tecnologia de ponta para oferecer resultados excepcionais a cada paciente.
+                À frente da Integral está a Dra Viviane Paz Torres, Enfermeira Estomaterapeuta, com mais de 15 anos de
+                experiência na área de feridas e no acompanhamento de pessoas que precisam de um tratamento eficaz e
+                contínuo. Viviane também atua como responsável técnica do Serviço de Atenção à Pessoa com Estomia da
+                Baixada Litorânea há mais de 12 anos.
+              </p>
+              <p>
+                Seu trabalho é marcado pela escuta, pelo cuidado próximo e pela busca constante de atualização e
+                soluções que realmente façam diferença no processo de recuperação de cada pessoa atendida. A Integral
+                nasce com esse propósito, oferecer um atendimento especializado, acessível e humano, sendo lembrada
+                como referência sempre que alguém precisar de tratamento de feridas com segurança, ciência, tecnologia e
+                confiança.
               </p>
             </div>
 
