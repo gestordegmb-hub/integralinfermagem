@@ -7,7 +7,7 @@ import diabeticFootIcon from "@/assets/icon-pe-diabetico.png";
 import laserOzoneIcon from "@/assets/icon-laser-ozonio.png";
 import ledTherapyIcon from "@/assets/icon-led-terapia.png";
 import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png";
-import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio.png";
+import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio-uploaded.jpg";
 import podiatryIcon from "@/assets/icon-podiatria-uploaded.jpg";
 import postoperativeCareIcon from "@/assets/icon-cuidados-pos-operatorios.png";
 import mentoringTrainingIcon from "@/assets/icon-mentoria-capacitacao.png";
