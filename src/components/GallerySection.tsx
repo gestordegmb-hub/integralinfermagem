@@ -46,6 +46,8 @@ const GallerySection = () => {
     if (typeof window === "undefined") return true;
     return window.localStorage.getItem("galleryAutoplay") !== "paused";
   });
+  const lastSwipeTime = useRef<number>(0);
+  const SWIPE_COOLDOWN = 400;
 
   const goToPrevious = () => {
     setActiveIndex((current) => (current === 0 ? galleryItems.length - 1 : current - 1));
@@ -159,10 +161,16 @@ const GallerySection = () => {
             onTouchStart={(event) => setTouchStart(event.touches[0].clientX)}
             onTouchEnd={(event) => {
               if (touchStart === null) return;
+              const now = Date.now();
+              if (now - lastSwipeTime.current < SWIPE_COOLDOWN) {
+                setTouchStart(null);
+                return;
+              }
               const distance = touchStart - event.changedTouches[0].clientX;
               const carouselWidth = carouselRef.current?.offsetWidth ?? 0;
               const threshold = Math.max(45, carouselWidth * 0.15);
               if (Math.abs(distance) > threshold) {
+                lastSwipeTime.current = now;
                 distance > 0 ? goToNext() : goToPrevious();
                 window.requestAnimationFrame(() => carouselRef.current?.focus());
               }
