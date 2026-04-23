@@ -230,6 +230,8 @@ const GallerySection = () => {
                 <motion.img
                   key={activeItem.label}
                   src={activeItem.src}
+                  srcSet={activeItem.srcSet}
+                  sizes={galleryImageSizes}
                   alt={activeItem.alt}
                   initial={{ opacity: 0, scale: 1.015 }}
                   animate={{ opacity: 1, scale: 1 }}
