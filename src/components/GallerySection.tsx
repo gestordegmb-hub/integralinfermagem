@@ -51,9 +51,9 @@ const GallerySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: index * 0.1 }}
-              className="group relative min-h-[360px] overflow-hidden rounded-md border border-border/60 bg-card shadow-sm sm:min-h-[430px] lg:min-h-[520px]"
+              className="group relative min-h-[360px] overflow-hidden rounded-md bg-muted/30 shadow-sm sm:min-h-[430px] lg:min-h-[520px]"
             >
-              <div className="absolute inset-0 flex items-center justify-center bg-muted/50 p-3 sm:p-4">
+              <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
                 <img
                   src={item.src}
                   alt={item.alt}
@@ -61,9 +61,9 @@ const GallerySection = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/65 via-secondary/10 to-transparent" />
-              <figcaption className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-                <span className="inline-flex border border-accent/40 bg-background/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground backdrop-blur-sm">
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/70 via-secondary/10 to-transparent" />
+              <figcaption className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
+                <span className="font-serif text-2xl italic leading-tight text-secondary-foreground drop-shadow-sm sm:text-3xl">
                   {item.label}
                 </span>
               </figcaption>
