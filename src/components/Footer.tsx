@@ -3,7 +3,7 @@ import logoImg from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="text-primary-foreground" style={{ backgroundColor: '#055F57' }}>
       {/* Gold top border */}
       <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
 
