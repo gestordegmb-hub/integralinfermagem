@@ -39,7 +39,7 @@ const canPreloadGalleryImages = () => {
 const GallerySection = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchStart, setTouchStart] = useState<{ x: number; y: number } | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(() => new Set());
   const [isCarouselFocused, setIsCarouselFocused] = useState(false);
   const [isAutoplayEnabled, setIsAutoplayEnabled] = useState(() => {
@@ -135,7 +135,7 @@ const GallerySection = () => {
           <div
             ref={carouselRef}
             id="gallery-carousel"
-            className="group relative overflow-hidden rounded-2xl bg-card p-3 shadow-[0_18px_60px_-24px_hsl(var(--foreground)/0.28)] outline-none ring-offset-4 ring-offset-background transition-all duration-300 focus-visible:ring-2 focus-visible:ring-gold focus-visible:shadow-[0_22px_70px_-22px_hsl(var(--gold)/0.42)] sm:p-4"
+            className="group relative overflow-hidden rounded-2xl bg-card p-3 shadow-[0_18px_60px_-24px_hsl(var(--foreground)/0.28)] outline-none ring-offset-4 ring-offset-background touch-pan-y transition-all duration-300 focus-visible:ring-2 focus-visible:ring-gold focus-visible:shadow-[0_22px_70px_-22px_hsl(var(--gold)/0.42)] sm:p-4"
             tabIndex={0}
             role="region"
             aria-label="Carrossel da galeria"
@@ -158,20 +158,34 @@ const GallerySection = () => {
                 window.requestAnimationFrame(() => carouselRef.current?.focus());
               }
             }}
-            onTouchStart={(event) => setTouchStart(event.touches[0].clientX)}
+            onTouchStart={(event) => {
+              setTouchStart({
+                x: event.touches[0].clientX,
+                y: event.touches[0].clientY,
+              });
+            }}
             onTouchEnd={(event) => {
               if (touchStart === null) return;
+              const deltaX = touchStart.x - event.changedTouches[0].clientX;
+              const deltaY = touchStart.y - event.changedTouches[0].clientY;
+              const isMostlyVertical = Math.abs(deltaY) > Math.abs(deltaX) * 0.75;
+
+              if (isMostlyVertical) {
+                setTouchStart(null);
+                return;
+              }
+
               const now = Date.now();
               if (now - lastSwipeTime.current < SWIPE_COOLDOWN) {
                 setTouchStart(null);
                 return;
               }
-              const distance = touchStart - event.changedTouches[0].clientX;
+
               const carouselWidth = carouselRef.current?.offsetWidth ?? 0;
               const threshold = Math.max(45, carouselWidth * 0.15);
-              if (Math.abs(distance) > threshold) {
+              if (Math.abs(deltaX) > threshold) {
                 lastSwipeTime.current = now;
-                distance > 0 ? goToNext() : goToPrevious();
+                deltaX > 0 ? goToNext() : goToPrevious();
                 window.requestAnimationFrame(() => carouselRef.current?.focus());
               }
               setTouchStart(null);
