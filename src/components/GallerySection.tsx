@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import ozoneTherapyImage from "@/assets/gallery-ozonioterapia.png";
 import laserTherapyImage from "@/assets/gallery-laserterapia.jpg";
-import heroClinicImage from "@/assets/hero-clinic.jpg";
+import regenerativeTherapyImage from "@/assets/gallery-terapia-regenerativa-prf.jpg";
 
 const galleryItems = [
   {
@@ -16,9 +16,9 @@ const galleryItems = [
     label: "Laserterapia",
   },
   {
-    src: heroClinicImage,
-    alt: "Estrutura acolhedora para atendimento especializado",
-    label: "Estrutura",
+    src: regenerativeTherapyImage,
+    alt: "Atendimento de terapia regenerativa PRF na clínica Integral",
+    label: "Terapia Regenerativa (PRF)",
   },
 ];
 
