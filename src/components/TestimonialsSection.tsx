@@ -6,25 +6,21 @@ const testimonials = [
   {
     name: "Vinicius Alves Araújo",
     initials: "VA",
-    role: "Paciente — Tratamento de Feridas",
     text: "Simplesmente perfeito o trabalho de vocês. Meu filho chegou com uma lesão profunda e hoje está super bem. Profissionalismo e carinho em cada atendimento.",
   },
   {
     name: "Monique Fernandes Torres",
     initials: "MF",
-    role: "Paciente — Estomia",
     text: "Profissionais super habilitadas, atenciosas e atualizadas. O melhor consultório de enfermagem da Região dos Lagos. Recomendo de olhos fechados.",
   },
   {
     name: "Janaína Martins Rocha",
     initials: "JM",
-    role: "Paciente — Laserterapia",
     text: "Atendimento de excelência e olhar atento às necessidades de cada paciente. Recursos como ozônio e laser que aceleram o tratamento de forma impressionante.",
   },
   {
     name: "Fabio Dalanhese",
     initials: "FD",
-    role: "Paciente — Tratamento Avançado",
     text: "Fomos muito bem acolhidos, o tratamento prescrito para minha tia com alta tecnologia. Equipe extremamente profissional e dedicada. Recomendo!",
   },
 ];
@@ -99,9 +95,6 @@ const TestimonialsSection = () => {
                         </h3>
                         <BadgeCheck className="h-4 w-4 shrink-0 fill-primary text-primary-foreground" />
                       </div>
-                      <p className="mt-1 truncate text-[11px] uppercase tracking-[0.1em] text-muted-foreground">
-                        {testimonial.role}
-                      </p>
                     </div>
                   </div>
                   <GoogleIcon />
