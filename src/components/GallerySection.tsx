@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import ozoneTherapyImage from "@/assets/gallery-ozonioterapia.png";
-import professionalImage from "@/assets/profissional_1.jpg";
+import laserTherapyImage from "@/assets/gallery-laserterapia.jpg";
 import heroClinicImage from "@/assets/hero-clinic.jpg";
 
 const galleryItems = [
@@ -11,9 +11,9 @@ const galleryItems = [
     label: "Ozonioterapia",
   },
   {
-    src: professionalImage,
-    alt: "Atendimento especializado da clínica Integral",
-    label: "Cuidado",
+    src: laserTherapyImage,
+    alt: "Atendimento de laserterapia na clínica Integral",
+    label: "Laserterapia",
   },
   {
     src: heroClinicImage,
