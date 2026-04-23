@@ -50,12 +50,12 @@ const AboutSection = () => {
             </div>
 
             {/* Professional Card */}
-            <div className="mt-8 sm:mt-10 rounded-md border border-border/40 border-l-4 border-l-gold bg-muted/40 p-5 sm:p-7">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+            <div className="mx-auto mt-8 max-w-3xl rounded-md border border-border/40 border-l-4 border-l-gold bg-muted/40 p-5 sm:mt-10 sm:p-7">
+              <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:text-left">
                 <img
                   src={profissional1}
                   alt="Enf.ª Viviane Paz Torres"
-                  className="h-16 w-16 flex-shrink-0 rounded-full border-2 border-gold/30 object-cover"
+                  className="h-28 w-28 flex-shrink-0 rounded-full border-2 border-gold/30 object-cover sm:h-32 sm:w-32"
                   loading="lazy"
                 />
                 <div className="min-w-0">
