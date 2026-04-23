@@ -25,7 +25,7 @@ const galleryItems = [
   },
 ];
 
-const frameClassBlocklist = /(^|:)(border|shadow|p[trblxy]?)-|(^|:)rounded/;
+const frameClassBlocklist = /(^|:)(border($|-)|shadow($|-)|rounded($|-)|p[trblxy]?-)/;
 
 export const galleryFrameClassName = (...classes: Parameters<typeof cn>) =>
   cn(...classes)
