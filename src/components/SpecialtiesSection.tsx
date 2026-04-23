@@ -10,7 +10,7 @@ import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png"
 import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio-uploaded.jpg";
 import podiatryIcon from "@/assets/icon-podiatria-uploaded.jpg";
 import postoperativeCareIcon from "@/assets/icon-cuidados-pos-operatorios.png";
-import mentoringTrainingIcon from "@/assets/icon-mentoria-capacitacao.png";
+import mentoringTrainingIcon from "@/assets/icon-mentoria-capacitacao-uploaded.jpg";
 
 type Service = {
   title: string;
