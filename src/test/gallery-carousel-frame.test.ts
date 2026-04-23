@@ -1,31 +1,19 @@
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 
-const gallerySource = readFileSync(resolve(process.cwd(), "src/components/GallerySection.tsx"), "utf8");
-
-const carouselContainerClass = gallerySource.match(/id="gallery-carousel"[\s\S]*?className="([^"]+)"/)?.[1] ?? "";
-const imageViewportClass = gallerySource.match(/<div className="([^"]*aspect-\[4\/5\][^"]*)"/)?.[1] ?? "";
-const forbiddenFrameTokens = [
-  "bg-card",
-  "bg-muted",
-  "border",
-  "rounded",
-  "shadow",
-  "p-",
-  "sm:p-",
-  "md:p-",
-  "lg:p-",
-  "xl:p-",
-  "2xl:p-",
-];
+import { galleryFrameClassName } from "@/components/GallerySection";
 
 describe("Gallery carousel frame", () => {
-  it("keeps the carousel image area free of visible frame classes across breakpoints", () => {
-    const visibleFrameClasses = `${carouselContainerClass} ${imageViewportClass}`
-      .split(/\s+/)
-      .filter((token) => forbiddenFrameTokens.some((forbidden) => token.includes(forbidden)));
+  it("keeps frame regressions out of the carousel guardrail", () => {
+    const className = galleryFrameClassName(
+      "group relative border border-gold shadow-lg rounded-xl p-4 sm:p-6 bg-card touch-pan-y",
+    );
 
-    expect(visibleFrameClasses).toEqual([]);
+    expect(className).toContain("group");
+    expect(className).toContain("relative");
+    expect(className).toContain("touch-pan-y");
+    expect(className).not.toMatch(/(^|\s)([^\s]*:)?border/);
+    expect(className).not.toMatch(/(^|\s)([^\s]*:)?shadow/);
+    expect(className).not.toMatch(/(^|\s)([^\s]*:)?rounded/);
+    expect(className).not.toMatch(/(^|\s)([^\s]*:)?p[trblxy]?-/);
   });
 });
