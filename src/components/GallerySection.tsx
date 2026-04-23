@@ -131,6 +131,7 @@ const GallerySection = () => {
         >
           <div
             ref={carouselRef}
+            id="gallery-carousel"
             className="group relative overflow-hidden rounded-2xl bg-card p-3 shadow-[0_18px_60px_-24px_hsl(var(--foreground)/0.28)] outline-none ring-offset-4 ring-offset-background transition-all duration-300 focus-visible:ring-2 focus-visible:ring-gold focus-visible:shadow-[0_22px_70px_-22px_hsl(var(--gold)/0.42)] sm:p-4"
             tabIndex={0}
             role="region"
