@@ -27,7 +27,7 @@ const features = [
 
 const IntroSection = () => {
   return (
-    <section className="py-20 sm:py-28 lg:py-32 bg-background">
+    <section className="py-16 sm:py-28 lg:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Label */}
         <motion.p
@@ -64,7 +64,7 @@ const IntroSection = () => {
         </motion.p>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8 mb-14 sm:mb-20">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -72,7 +72,7 @@ const IntroSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 * index, duration: 0.5 }}
-              className="premium-card p-8 text-center group"
+              className="premium-card p-6 sm:p-8 text-center group"
             >
               <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
                 <feature.icon className="w-6 h-6 text-gold" />
@@ -103,7 +103,7 @@ const IntroSection = () => {
             <Button
               variant="gold"
               size="lg"
-              className="gap-2.5 px-10 h-[52px] text-[13px] sm:text-[14px] uppercase tracking-[0.12em] hover:scale-105"
+              className="w-full max-w-[300px] gap-2.5 px-5 sm:px-10 h-[52px] text-[12px] sm:text-[14px] uppercase tracking-[0.08em] sm:tracking-[0.12em] hover:scale-105"
             >
               <MessageCircle className="w-[18px] h-[18px]" />
               Agendar pelo WhatsApp
@@ -117,18 +117,18 @@ const IntroSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-16 sm:mt-20 flex justify-center gap-12 sm:gap-20"
+          className="mt-14 sm:mt-20 grid grid-cols-3 gap-3 sm:flex sm:justify-center sm:gap-20"
         >
           {[
             { num: "+500", label: "Pacientes Atendidos" },
             { num: "15+", label: "Anos de Experiência" },
             { num: "100%", label: "Satisfação Garantida" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center">
+            <div key={stat.label} className="min-w-0 text-center">
               <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gold font-serif">
                 {stat.num}
               </p>
-              <p className="text-[10px] sm:text-[11px] text-muted-foreground mt-1.5 uppercase tracking-[0.15em] font-medium font-sans">
+              <p className="text-[9px] sm:text-[11px] text-muted-foreground mt-1.5 uppercase tracking-[0.08em] sm:tracking-[0.15em] font-medium font-sans leading-snug">
                 {stat.label}
               </p>
             </div>

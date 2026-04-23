@@ -67,21 +67,21 @@ const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="relative mx-auto max-w-6xl"
+          className="relative mx-auto max-w-6xl overflow-hidden"
         >
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-background to-transparent sm:w-16" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-background to-transparent sm:w-16" />
 
           <div
             ref={carouselRef}
-            className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-1 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             aria-label="Carrossel de depoimentos"
           >
             {testimonials.map((testimonial) => (
               <article
                 key={testimonial.name}
                 data-testimonial-card
-                className="flex min-h-[320px] min-w-full snap-start flex-col rounded-2xl border border-border/60 bg-card p-6 shadow-[0_18px_45px_-30px_hsl(var(--foreground)/0.45)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-32px_hsl(var(--foreground)/0.55)] sm:min-w-[calc((100%-1.5rem)/2)] lg:min-w-[calc((100%-3rem)/3)]"
+                className="flex min-h-[320px] w-full flex-none snap-start flex-col rounded-2xl border border-border/60 bg-card p-6 shadow-[0_18px_45px_-30px_hsl(var(--foreground)/0.45)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-32px_hsl(var(--foreground)/0.55)] sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]"
               >
                 <div className="mb-5 flex items-start justify-between gap-4">
                   <div className="flex min-w-0 items-center gap-3.5">

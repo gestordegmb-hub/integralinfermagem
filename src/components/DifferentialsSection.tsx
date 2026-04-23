@@ -41,14 +41,14 @@ const DifferentialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="bg-white/5 border border-white/10 rounded-md p-7 sm:p-8 hover:border-gold/30 transition-all duration-500 group"
+              className="bg-white/5 border border-white/10 rounded-md p-5 sm:p-8 hover:border-gold/30 transition-all duration-500 group"
             >
-              <div className="flex items-start gap-5">
-                <span className="text-4xl sm:text-5xl font-serif text-gold/60 font-semibold leading-none">{d.num}</span>
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-start gap-4 sm:gap-5">
+                <span className="text-3xl sm:text-5xl font-serif text-gold/60 font-semibold leading-none">{d.num}</span>
+                <div className="min-w-0">
+                  <div className="flex items-start gap-3 mb-3">
                     <d.icon className="w-5 h-5 text-gold" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-white font-serif">{d.title}</h3>
+                    <h3 className="font-semibold text-lg sm:text-xl text-white font-serif leading-tight">{d.title}</h3>
                   </div>
                   <p className="text-[14px] text-white/60 leading-[1.65] font-sans">{d.desc}</p>
                 </div>
@@ -58,7 +58,7 @@ const DifferentialsSection = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-12">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -69,7 +69,7 @@ const DifferentialsSection = () => {
               className="text-center"
             >
               <p className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-gold font-serif">{s.num}</p>
-              <p className="text-[11px] sm:text-[12px] text-white/50 mt-3 uppercase tracking-[0.12em] font-sans font-medium">{s.label}</p>
+              <p className="text-[10px] sm:text-[12px] text-white/50 mt-3 uppercase tracking-[0.08em] sm:tracking-[0.12em] font-sans font-medium leading-snug">{s.label}</p>
             </motion.div>
           ))}
         </div>
