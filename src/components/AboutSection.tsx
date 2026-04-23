@@ -14,7 +14,7 @@ const AboutSection = () => {
     <section id="sobre" className="py-16 sm:py-24 lg:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Two columns: text left, image right */}
-        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 xl:gap-20 items-start mb-16 sm:mb-24">
+        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 sm:gap-12 lg:gap-16 xl:gap-20 items-start mb-14 sm:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ const AboutSection = () => {
             </h2>
             <div className="premium-divider !mx-0" />
 
-            <div className="space-y-5 mt-8 max-w-2xl text-[15px] sm:text-base text-muted-foreground leading-[1.7] font-sans">
+            <div className="space-y-5 mt-7 sm:mt-8 max-w-2xl text-[15px] sm:text-base text-muted-foreground leading-[1.7] font-sans">
               <p>
                 A Integral Clínica de Enfermagem Especializada nasceu da experiência prática e do compromisso com um
                 cuidado mais humano, resolutivo e especializado no tratamento de feridas. Localizada em Cabo Frio, a
@@ -50,12 +50,12 @@ const AboutSection = () => {
             </div>
 
             {/* Professional Card */}
-            <div className="mt-10 rounded-md border border-border/40 border-l-4 border-l-gold bg-muted/40 p-5 sm:p-7">
+            <div className="mt-8 sm:mt-10 rounded-md border border-border/40 border-l-4 border-l-gold bg-muted/40 p-5 sm:p-7">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                 <img
                   src={profissional1}
                   alt="Enf.ª Viviane Paz Torres"
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0 border-2 border-gold/30"
+                  className="h-16 w-16 flex-shrink-0 rounded-full border-2 border-gold/30 object-cover"
                   loading="lazy"
                 />
                 <div className="min-w-0">
@@ -84,7 +84,7 @@ const AboutSection = () => {
               <img
                 src={clinicaImg}
                 alt="Fachada da Integral Clínica de Enfermagem"
-                className="rounded-md w-full aspect-[4/5] max-h-[620px] object-cover border border-gold/20 shadow-lg hover:shadow-xl transition-shadow duration-500"
+                className="rounded-md w-full aspect-[4/3] sm:aspect-[4/5] max-h-[620px] object-cover border border-gold/20 shadow-lg hover:shadow-xl transition-shadow duration-500"
                 loading="lazy"
               />
             </div>
@@ -92,7 +92,7 @@ const AboutSection = () => {
         </div>
 
         {/* Mission, Vision, Values */}
-        <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid sm:grid-cols-3 gap-5 sm:gap-8">
           {values.map((v, i) => (
             <motion.div
               key={v.title}
@@ -100,7 +100,7 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="premium-card p-7 sm:p-8 text-center group"
+              className="premium-card p-6 sm:p-8 text-center group"
             >
               <div className="w-14 h-14 mx-auto rounded-full bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors duration-500">
                 <v.icon className="w-6 h-6 text-gold" />
