@@ -139,7 +139,7 @@ const SpecialtiesSection = () => {
           className="text-center mt-12 sm:mt-16"
         >
           <a href="#agendamento">
-            <Button variant="gold" size="lg" className="gap-2 uppercase text-[12px] sm:text-[13px] tracking-[0.12em] h-[52px] px-10 hover:scale-105">
+            <Button variant="gold" size="lg" className="w-full max-w-[300px] gap-2 px-5 sm:px-10 uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] h-[52px] hover:scale-105">
               Solicitar Informações
               <ArrowRight className="w-4 h-4" />
             </Button>

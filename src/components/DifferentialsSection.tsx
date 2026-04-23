@@ -43,11 +43,11 @@ const DifferentialsSection = () => {
               transition={{ delay: i * 0.1, duration: 0.6 }}
               className="bg-white/5 border border-white/10 rounded-md p-5 sm:p-8 hover:border-gold/30 transition-all duration-500 group"
             >
-              <div className="flex items-start gap-4 sm:gap-5">
+              <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:gap-5 sm:text-left">
                 <span className="text-3xl sm:text-5xl font-serif text-gold/60 font-semibold leading-none">{d.num}</span>
                 <div className="min-w-0">
-                  <div className="flex items-start gap-3 mb-3">
-                    <d.icon className="w-5 h-5 text-gold" />
+                  <div className="flex flex-col items-center gap-2 mb-3 sm:flex-row sm:items-start sm:gap-3">
+                    <d.icon className="w-5 h-5 shrink-0 text-gold" />
                     <h3 className="font-semibold text-lg sm:text-xl text-white font-serif leading-tight">{d.title}</h3>
                   </div>
                   <p className="text-[14px] text-white/60 leading-[1.65] font-sans">{d.desc}</p>

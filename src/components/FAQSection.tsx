@@ -70,7 +70,7 @@ const FAQSection = () => {
           <Accordion type="single" collapsible className="w-full border-t border-border/70">
             {faqItems.map((item) => (
               <AccordionItem key={item.question} value={item.question} className="border-border/70">
-                <AccordionTrigger className="py-6 text-left font-serif text-xl font-semibold leading-snug text-foreground hover:no-underline data-[state=open]:text-gold sm:text-2xl">
+                <AccordionTrigger className="py-5 text-left font-serif text-lg font-semibold leading-snug text-foreground hover:no-underline data-[state=open]:text-gold sm:py-6 sm:text-2xl">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="pb-6 text-[15px] leading-relaxed text-muted-foreground sm:text-base">

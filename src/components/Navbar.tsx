@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Serviços", href: "#especialidades" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Depoimentos", href: "#depoimentos" },
-  { label: "Contato", href: "#contato" },
+  { label: "Contato", href: "#agendamento" },
 ];
 
 const Navbar = () => {
