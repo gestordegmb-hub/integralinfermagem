@@ -31,6 +31,12 @@ const testimonials = [
     avatar: danieleSilveiraAvatar,
     text: "Ambiente muito acolhedor, e profissionais atenciosas, te explicam e tranquilizam em relação aos procedimentos que precisam ser realizados, sempre com muito profissionalismo, conhecimento o que gera confiança no atendimento.",
   },
+  {
+    name: "Juliana Lobo",
+    initials: "JL",
+    avatar: julianaLoboAvatar,
+    text: "Viviane é uma profissional ímpar, maravilhosa, super competente e humana. Super indico.",
+  },
 ];
 
 const GoogleIcon = () => (
