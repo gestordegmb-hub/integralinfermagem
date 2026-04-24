@@ -11,6 +11,7 @@ const testimonials = [
   {
     name: "Vinicius Alves Araújo",
     initials: "VA",
+    avatar: viniciusAraujoAvatar,
     text: "Simplesmente perfeito o trabalho de vocês. Meu filho chegou com uma lesão profunda e hoje está super bem. Profissionalismo e carinho em cada atendimento.",
   },
   {
