@@ -26,11 +26,11 @@ const DifferentialsSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-xl mx-auto mb-14 sm:mb-20"
         >
-          <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.2em] text-gold font-medium font-sans">Diferenciais</span>
+          <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.2em] text-gold font-semibold font-sans drop-shadow-[0_1px_6px_rgba(196,163,90,0.35)]">Diferenciais</span>
           <h2 className="text-[28px] sm:text-4xl md:text-[2.75rem] lg:text-5xl font-semibold mt-4 mb-5 text-white leading-[1.15] font-serif italic">
             O Que Nos Torna Diferentes
           </h2>
-          <div className="w-12 h-px mx-auto mt-5 bg-gold" />
+          <div className="w-16 h-[2px] mx-auto mt-5 bg-gold rounded-full" />
         </motion.div>
 
         <div className="grid sm:grid-cols-2 gap-6 sm:gap-7 mb-16 sm:mb-20">
