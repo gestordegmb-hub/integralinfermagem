@@ -41,16 +41,16 @@ const DifferentialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="bg-white/5 border border-white/10 rounded-md p-5 sm:p-8 hover:border-gold/30 transition-all duration-500 group"
+              className="bg-white/[0.07] border border-white/15 rounded-md p-5 sm:p-8 hover:border-gold/50 hover:bg-white/[0.09] transition-all duration-500 group"
             >
               <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:gap-5 sm:text-left">
-                <span className="text-3xl sm:text-5xl font-serif text-gold/60 font-semibold leading-none">{d.num}</span>
+                <span className="text-4xl sm:text-5xl font-serif text-gold font-bold leading-none drop-shadow-[0_2px_8px_rgba(196,163,90,0.35)]">{d.num}</span>
                 <div className="min-w-0">
                   <div className="flex flex-col items-center gap-2 mb-3 sm:flex-row sm:items-start sm:gap-3">
-                    <d.icon className="w-5 h-5 shrink-0 text-gold" />
+                    <d.icon className="w-6 h-6 shrink-0 text-gold" strokeWidth={2.25} />
                     <h3 className="font-semibold text-lg sm:text-xl text-white font-serif leading-tight">{d.title}</h3>
                   </div>
-                  <p className="text-[14px] text-white/60 leading-[1.65] font-sans">{d.desc}</p>
+                  <p className="text-[14px] sm:text-[15px] text-white/80 leading-[1.65] font-sans">{d.desc}</p>
                 </div>
               </div>
             </motion.div>
