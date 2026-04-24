@@ -24,6 +24,7 @@ const testimonials = [
   {
     name: "Fabio Dalanhese",
     initials: "FD",
+    avatar: fabioDalanheseAvatar,
     text: "Fomos muito bem acolhidos, o tratamento prescrito para minha tia com alta tecnologia. Equipe extremamente profissional e dedicada. Recomendo!",
   },
   {
