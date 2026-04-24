@@ -70,13 +70,8 @@
     scroll-behavior: smooth;
   }
 
-  /* Prevent any element from forcing horizontal overflow on mobile */
-  img, video, svg {
-    max-width: 100%;
-    height: auto;
-  }
-
-  iframe {
+  /* Prevent any media element from forcing horizontal overflow on mobile */
+  img, video, svg, iframe {
     max-width: 100%;
   }
 
