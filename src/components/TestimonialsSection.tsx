@@ -6,6 +6,7 @@ import julianaLoboAvatar from "@/assets/depoimento-juliana-lobo.png";
 import fabioDalanheseAvatar from "@/assets/depoimento-fabio-dalanhese.png";
 import patriciaTeixeiraAvatar from "@/assets/depoimento-patricia-teixeira.png";
 import viniciusAraujoAvatar from "@/assets/depoimento-vinicius-araujo.png";
+import janainaRochaAvatar from "@/assets/depoimento-janaina-rocha.png";
 
 const testimonials = [
   {
@@ -23,6 +24,7 @@ const testimonials = [
   {
     name: "Janaína Martins Rocha",
     initials: "JM",
+    avatar: janainaRochaAvatar,
     text: "Atendimento de excelência e olhar atento às necessidades de cada paciente. Recursos como ozônio e laser que aceleram o tratamento de forma impressionante.",
   },
   {
