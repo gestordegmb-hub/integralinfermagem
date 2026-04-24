@@ -77,6 +77,19 @@ const TestimonialsSection = () => {
         >
           <span className="section-label">Depoimentos</span>
           <h2 className="section-title">O Que Nossos Pacientes Dizem</h2>
+          <div className="mt-4 flex flex-col items-center justify-center gap-2">
+            <div className="flex items-center gap-1" aria-label="Avaliação 5 de 5 estrelas">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="h-5 w-5 fill-gold text-gold" />
+              ))}
+              <span className="ml-1.5 text-base font-semibold text-foreground">5,0</span>
+            </div>
+            <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
+              Baseado em <span className="font-semibold text-foreground">52 avaliações</span> no
+              <GoogleIcon />
+              <span className="font-semibold text-foreground">Google</span>
+            </p>
+          </div>
           <div className="premium-divider" />
         </motion.div>
 
