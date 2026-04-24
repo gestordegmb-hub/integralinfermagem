@@ -12,6 +12,7 @@ import CTASection from "@/components/CTASection";
 import SchedulingSection from "@/components/SchedulingSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import DeveloperCredit from "@/components/DeveloperCredit";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
@@ -39,6 +40,7 @@ const Index = () => {
         <FAQSection />
       </main>
       <Footer />
+      <DeveloperCredit />
       <WhatsAppButton />
     </>
   );
