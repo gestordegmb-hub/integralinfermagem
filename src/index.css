@@ -71,13 +71,13 @@
   }
 
   /* Prevent any element from forcing horizontal overflow on mobile */
-  img, video, iframe, svg {
+  img, video, svg {
     max-width: 100%;
     height: auto;
   }
 
   iframe {
-    height: auto;
+    max-width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
