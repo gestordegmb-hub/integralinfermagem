@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { BadgeCheck, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import danieleSilveiraAvatar from "@/assets/depoimento-daniele-silveira.png";
 
 const testimonials = [
   {
