@@ -24,6 +24,7 @@ const testimonials = [
   {
     name: "Janaína Martins Rocha",
     initials: "JM",
+    avatar: janainaRochaAvatar,
     text: "Atendimento de excelência e olhar atento às necessidades de cada paciente. Recursos como ozônio e laser que aceleram o tratamento de forma impressionante.",
   },
   {
