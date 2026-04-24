@@ -92,8 +92,17 @@ const TestimonialsSection = () => {
               >
                 <div className="mb-5 flex items-start justify-between gap-4">
                   <div className="flex min-w-0 items-center gap-3.5">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary shadow-inner">
-                      {testimonial.initials}
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary/10 text-sm font-semibold text-primary shadow-inner">
+                      {testimonial.avatar ? (
+                        <img
+                          src={testimonial.avatar}
+                          alt={`Foto de ${testimonial.name}`}
+                          className="h-full w-full object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
+                        testimonial.initials
+                      )}
                     </div>
                     <div className="min-w-0">
                       <div className="flex items-center gap-1.5">
