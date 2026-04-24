@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { BadgeCheck, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import danieleSilveiraAvatar from "@/assets/depoimento-daniele-silveira.png";
+import julianaLoboAvatar from "@/assets/depoimento-juliana-lobo.png";
 
 const testimonials = [
   {
@@ -29,6 +30,12 @@ const testimonials = [
     initials: "DS",
     avatar: danieleSilveiraAvatar,
     text: "Ambiente muito acolhedor, e profissionais atenciosas, te explicam e tranquilizam em relação aos procedimentos que precisam ser realizados, sempre com muito profissionalismo, conhecimento o que gera confiança no atendimento.",
+  },
+  {
+    name: "Juliana Lobo",
+    initials: "JL",
+    avatar: julianaLoboAvatar,
+    text: "Viviane é uma profissional ímpar, maravilhosa, super competente e humana. Super indico.",
   },
 ];
 
