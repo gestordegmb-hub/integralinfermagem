@@ -27,6 +27,7 @@ const testimonials = [
   {
     name: "Daniele Silveira",
     initials: "DS",
+    avatar: danieleSilveiraAvatar,
     text: "Ambiente muito acolhedor, e profissionais atenciosas, te explicam e tranquilizam em relação aos procedimentos que precisam ser realizados, sempre com muito profissionalismo, conhecimento o que gera confiança no atendimento.",
   },
 ];
