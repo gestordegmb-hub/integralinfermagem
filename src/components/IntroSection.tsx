@@ -117,7 +117,7 @@ const IntroSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-14 sm:mt-20 grid grid-cols-3 gap-3 sm:flex sm:justify-center sm:gap-20"
+          className="mt-14 sm:mt-20 grid grid-cols-3 gap-2 sm:flex sm:justify-center sm:gap-20"
         >
           {[
             { num: "+500", label: "Pacientes Atendidos" },
@@ -125,10 +125,10 @@ const IntroSection = () => {
             { num: "100%", label: "Satisfação Garantida" },
           ].map((stat) => (
             <div key={stat.label} className="min-w-0 text-center">
-              <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gold font-serif">
+              <p className="text-[22px] sm:text-3xl lg:text-4xl font-semibold text-gold font-serif">
                 {stat.num}
               </p>
-              <p className="text-[9px] sm:text-[11px] text-muted-foreground mt-1.5 uppercase tracking-[0.08em] sm:tracking-[0.15em] font-medium font-sans leading-snug">
+              <p className="text-[9px] sm:text-[11px] text-muted-foreground mt-1.5 uppercase tracking-[0.05em] sm:tracking-[0.15em] font-medium font-sans leading-snug px-1 break-words">
                 {stat.label}
               </p>
             </div>
