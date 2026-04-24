@@ -35,9 +35,9 @@ const CTASection = () => {
               "Atendimento 6 dias por semana",
               "Equipe certificada",
             ].map((item) => (
-              <div key={item} className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-gold flex-shrink-0" />
-                <span className="text-[13px] sm:text-[14px] text-white/80 font-sans font-medium">{item}</span>
+              <div key={item} className="flex items-center gap-2.5">
+                <CheckCircle className="w-5 h-5 text-gold flex-shrink-0 drop-shadow-[0_1px_4px_rgba(196,163,90,0.4)]" strokeWidth={2.25} />
+                <span className="text-[13px] sm:text-[15px] text-white font-sans font-semibold">{item}</span>
               </div>
             ))}
           </div>
