@@ -5,6 +5,7 @@ import danieleSilveiraAvatar from "@/assets/depoimento-daniele-silveira.png";
 import julianaLoboAvatar from "@/assets/depoimento-juliana-lobo.png";
 import fabioDalanheseAvatar from "@/assets/depoimento-fabio-dalanhese.png";
 import patriciaTeixeiraAvatar from "@/assets/depoimento-patricia-teixeira.png";
+import viniciusAraujoAvatar from "@/assets/depoimento-vinicius-araujo.png";
 
 const testimonials = [
   {
