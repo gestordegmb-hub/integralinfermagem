@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { BadgeCheck, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import danieleSilveiraAvatar from "@/assets/depoimento-daniele-silveira.png";
+import julianaLoboAvatar from "@/assets/depoimento-juliana-lobo.png";
 
 const testimonials = [
   {
