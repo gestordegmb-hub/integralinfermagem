@@ -35,7 +35,7 @@ const WhatsAppButton = () => {
           </AnimatePresence>
 
           <a
-            href="https://wa.me/5522974017588?text=Olá! Vim pelo site e gostaria de agendar uma consulta na Integral Clínica."
+            href="https://wa.me/5522974017588?text=Olá! Vim pelo site e gostaria de agendar uma consulta na Clínica Integral."
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-14 w-14 items-center justify-center rounded-full bg-[hsl(142,70%,42%)] text-white shadow-xl shadow-black/15 transition-all duration-500 hover:scale-110 hover:shadow-2xl sm:h-[60px] sm:w-[60px]"
