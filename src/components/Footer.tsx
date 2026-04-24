@@ -15,10 +15,10 @@ const Footer = () => {
               <img src={logoImg} alt="Clínica Integral" className="w-10 h-10 rounded-full object-cover" />
               <div>
                 <span className="font-semibold text-base tracking-wide font-serif block">Clínica Integral</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-gold/70 font-sans">Enfermagem Especializada</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold font-sans">Enfermagem Especializada</span>
               </div>
             </div>
-            <div className="w-8 h-px bg-gold/50 mb-5" />
+            <div className="w-10 h-[2px] bg-gold mb-5 rounded-full" />
             <p className="text-[14px] text-white/80 leading-[1.65] font-sans">
               Cuidado humanizado com a qualidade que você merece.
               Mais de 15 anos de experiência em enfermagem especializada.
@@ -38,7 +38,7 @@ const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-[11px] sm:text-[12px] uppercase tracking-[0.12em] text-gold/80 mb-6 font-medium font-sans">Navegação</h4>
+            <h4 className="text-[12px] sm:text-[13px] uppercase tracking-[0.14em] text-gold mb-6 font-semibold font-sans">Navegação</h4>
             <ul className="space-y-3.5 text-[14px] text-white/80 font-sans">
               {[
                 { label: "Início", href: "#inicio" },
@@ -55,7 +55,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-[11px] sm:text-[12px] uppercase tracking-[0.12em] text-gold/80 mb-6 font-medium font-sans">Serviços</h4>
+            <h4 className="text-[12px] sm:text-[13px] uppercase tracking-[0.14em] text-gold mb-6 font-semibold font-sans">Serviços</h4>
             <ul className="space-y-3.5 text-[14px] text-white/80 font-sans">
               <li>Tratamento de Feridas</li>
               <li>Estomias</li>
@@ -67,22 +67,22 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[11px] sm:text-[12px] uppercase tracking-[0.12em] text-gold/80 mb-6 font-medium font-sans">Contato</h4>
+            <h4 className="text-[12px] sm:text-[13px] uppercase tracking-[0.14em] text-gold mb-6 font-semibold font-sans">Contato</h4>
             <ul className="space-y-4 text-[14px] text-white/80 font-sans">
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-gold/60 flex-shrink-0" />
+                <Phone className="w-[18px] h-[18px] text-gold flex-shrink-0" strokeWidth={2.25} />
                 <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">(22) 97401-7588</a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-gold/60 flex-shrink-0" />
+                <Phone className="w-[18px] h-[18px] text-gold flex-shrink-0" strokeWidth={2.25} />
                 <a href="https://wa.me/5522998271485" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">(22) 99827-1485</a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-gold/60 mt-0.5 flex-shrink-0" />
+                <MapPin className="w-[18px] h-[18px] text-gold mt-0.5 flex-shrink-0" strokeWidth={2.25} />
                 <span>Rua Cuiabá, 193<br />Cabo Frio — RJ</span>
               </li>
               <li className="flex items-start gap-3">
-                <Clock className="w-4 h-4 text-gold/60 mt-0.5 flex-shrink-0" />
+                <Clock className="w-[18px] h-[18px] text-gold mt-0.5 flex-shrink-0" strokeWidth={2.25} />
                 <span>Seg–Sex: 09h–18h<br />Sáb: 09h–13h</span>
               </li>
             </ul>
