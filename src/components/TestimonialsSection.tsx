@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { BadgeCheck, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import danieleSilveiraAvatar from "@/assets/depoimento-daniele-silveira.png";
 import julianaLoboAvatar from "@/assets/depoimento-juliana-lobo.png";
+import fabioDalanheseAvatar from "@/assets/depoimento-fabio-dalanhese.png";
 
 const testimonials = [
   {
@@ -23,6 +24,7 @@ const testimonials = [
   {
     name: "Fabio Dalanhese",
     initials: "FD",
+    avatar: fabioDalanheseAvatar,
     text: "Fomos muito bem acolhidos, o tratamento prescrito para minha tia com alta tecnologia. Equipe extremamente profissional e dedicada. Recomendo!",
   },
   {
