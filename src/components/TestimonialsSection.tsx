@@ -23,6 +23,11 @@ const testimonials = [
     initials: "FD",
     text: "Fomos muito bem acolhidos, o tratamento prescrito para minha tia com alta tecnologia. Equipe extremamente profissional e dedicada. Recomendo!",
   },
+  {
+    name: "Daniele Silveira",
+    initials: "DS",
+    text: "Ambiente muito acolhedor, e profissionais atenciosas, te explicam e tranquilizam em relação aos procedimentos que precisam ser realizados, sempre com muito profissionalismo, conhecimento o que gera confiança no atendimento.",
+  },
 ];
 
 const GoogleIcon = () => (
