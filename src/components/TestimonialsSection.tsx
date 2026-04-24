@@ -4,6 +4,7 @@ import { BadgeCheck, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import danieleSilveiraAvatar from "@/assets/depoimento-daniele-silveira.png";
 import julianaLoboAvatar from "@/assets/depoimento-juliana-lobo.png";
 import fabioDalanheseAvatar from "@/assets/depoimento-fabio-dalanhese.png";
+import patriciaTeixeiraAvatar from "@/assets/depoimento-patricia-teixeira.png";
 
 const testimonials = [
   {
@@ -12,9 +13,10 @@ const testimonials = [
     text: "Simplesmente perfeito o trabalho de vocês. Meu filho chegou com uma lesão profunda e hoje está super bem. Profissionalismo e carinho em cada atendimento.",
   },
   {
-    name: "Monique Fernandes Torres",
-    initials: "MF",
-    text: "Profissionais super habilitadas, atenciosas e atualizadas. O melhor consultório de enfermagem da Região dos Lagos. Recomendo de olhos fechados.",
+    name: "Patricia Teixeira",
+    initials: "PT",
+    avatar: patriciaTeixeiraAvatar,
+    text: "Realizei meu acompanhamento pós-operatório na Clínica Integral e só tenho a agradecer pelo cuidado recebido. A Enf. Geandra e toda a equipe demonstraram atenção, competência e um comprometimento genuíno com minha recuperação, sempre respeitando minhas expectativas e necessidades após o procedimento. As técnicas utilizadas são atuais, o ambiente é extremamente acolhedor e a experiência profissional da equipe fez toda a diferença no meu processo de recuperação. Recomendo com muita segurança e gratidão!",
   },
   {
     name: "Janaína Martins Rocha",
