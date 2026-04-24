@@ -44,7 +44,7 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="https://wa.me/5522974017588?text=Olá! Vim pelo site e gostaria de agendar uma consulta na Integral Clínica."
+              href="https://wa.me/5522974017588?text=Olá! Vim pelo site e gostaria de agendar uma consulta na Clínica Integral."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto"

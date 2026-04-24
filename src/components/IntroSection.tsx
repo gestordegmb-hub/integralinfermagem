@@ -96,7 +96,7 @@ const IntroSection = () => {
           className="text-center"
         >
           <a
-            href="https://wa.me/5522974017588?text=Olá! Vim pelo site e gostaria de agendar uma consulta na Integral Clínica."
+            href="https://wa.me/5522974017588?text=Olá! Vim pelo site e gostaria de agendar uma consulta na Clínica Integral."
             target="_blank"
             rel="noopener noreferrer"
           >
