@@ -68,8 +68,8 @@ const DifferentialsSection = () => {
               transition={{ delay: i * 0.1, duration: 0.5 }}
               className="text-center"
             >
-              <p className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-gold font-serif">{s.num}</p>
-              <p className="text-[10px] sm:text-[12px] text-white/50 mt-3 uppercase tracking-[0.08em] sm:tracking-[0.12em] font-sans font-medium leading-snug">{s.label}</p>
+              <p className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gold font-serif drop-shadow-[0_2px_10px_rgba(196,163,90,0.4)]">{s.num}</p>
+              <p className="text-[11px] sm:text-[13px] text-white/80 mt-3 uppercase tracking-[0.08em] sm:tracking-[0.12em] font-sans font-semibold leading-snug">{s.label}</p>
             </motion.div>
           ))}
         </div>
