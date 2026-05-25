@@ -26,7 +26,8 @@ const CTASection = () => {
           </h2>
           <p className="text-[15px] sm:text-base text-white/70 leading-[1.65] mb-8 sm:mb-10 font-sans max-w-lg mx-auto">
             Dê o primeiro passo para um cuidado de saúde verdadeiramente especializado.
-            Nossa equipe está pronta para atendê-lo.
+            Nossa equipe está{" "}
+            <span className="whitespace-nowrap">prontos&nbsp;para&nbsp;atendê-lo</span>.
           </p>
 
           <div className="flex flex-wrap justify-center gap-5 sm:gap-8 mb-10 sm:mb-12">
@@ -51,7 +52,7 @@ const CTASection = () => {
             >
               <Button variant="hero" size="lg" className="gap-2.5 px-5 sm:px-10 h-[52px] w-full uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] hover:scale-105">
                 <MessageCircle className="w-[18px] h-[18px] shrink-0" />
-                Agendar pelo WhatsApp
+                Agende sua Consulta
               </Button>
             </a>
             <a href="tel:+5522974017588" className="w-full sm:w-auto">

@@ -9,9 +9,9 @@ const differentials = [
 ];
 
 const stats = [
-  { num: "500+", label: "Pacientes Atendidos" },
-  { num: "15+", label: "Anos de Experiência" },
-  { num: "98%", label: "Índice de Satisfação" },
+  { num: "+2000", label: "Pacientes Atendidos" },
+  { num: "+15", label: "Anos de Experiência" },
+  { num: "100%", label: "Índice de Satisfação" },
   { num: "5.0", label: "Avaliação Google" },
 ];
 
