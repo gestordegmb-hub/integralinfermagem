@@ -79,8 +79,10 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-xl mx-auto mb-14 sm:mb-20"
         >
-          <span className="section-label">Depoimentos</span>
-          <h2 className="section-title">O Que Nossos Pacientes Dizem</h2>
+          <h2 className="section-title !text-[34px] sm:!text-[52px] lg:!text-[64px] !mb-3">Depoimentos</h2>
+          <p className="text-[15px] sm:text-[17px] text-muted-foreground font-sans italic">
+            O que dizem os nossos pacientes
+          </p>
           <div className="mt-4 flex flex-col items-center justify-center gap-2">
             <div className="flex items-center gap-1" aria-label="Avaliação 5 de 5 estrelas">
               {Array.from({ length: 5 }).map((_, i) => (

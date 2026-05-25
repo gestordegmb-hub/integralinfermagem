@@ -120,8 +120,8 @@ const IntroSection = () => {
           className="mt-14 sm:mt-20 grid grid-cols-3 gap-2 sm:flex sm:justify-center sm:gap-20"
         >
           {[
-            { num: "+500", label: "Pacientes Atendidos" },
-            { num: "15+", label: "Anos de Experiência" },
+            { num: "+2000", label: "Pacientes Atendidos" },
+            { num: "+15", label: "Anos de Experiência" },
             { num: "100%", label: "Satisfação Garantida" },
           ].map((stat) => (
             <div key={stat.label} className="min-w-0 text-center">

@@ -24,7 +24,7 @@ const AboutSection = () => {
             <div className="text-center sm:text-left">
               <span className="section-label">Sobre a Clínica</span>
               <h2 className="section-title sm:!text-left">
-                Uma Trajetória de Dedicação e Cuidado
+                Uma Trajetória de{"\u00A0"}Dedicação{"\u00A0"}e{"\u00A0"}Cuidado
               </h2>
               <div className="premium-divider sm:!mx-0" />
             </div>
@@ -52,12 +52,12 @@ const AboutSection = () => {
             </div>
 
             {/* Professional Card */}
-            <div className="mx-auto mt-8 max-w-3xl rounded-md border border-border/40 border-l-4 border-l-gold bg-muted/40 p-5 sm:mt-10 sm:p-7">
+            <div className="mx-auto mt-8 max-w-3xl rounded-md border border-border/40 border-l-4 border-l-gold bg-muted/40 p-5 sm:mt-10 sm:p-8">
               <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:text-left">
                 <img
                   src={profissional1}
                   alt="Enf.ª Viviane Paz Torres"
-                  className="h-28 w-28 flex-shrink-0 rounded-full border-2 border-gold/30 object-cover sm:h-32 sm:w-32"
+                  className="h-32 w-32 flex-shrink-0 rounded-full border-2 border-gold/30 object-cover object-[center_20%] sm:h-40 sm:w-40"
                   loading="lazy"
                 />
                 <div className="min-w-0">
@@ -65,9 +65,17 @@ const AboutSection = () => {
                   <p className="text-[11px] uppercase tracking-[0.12em] gold-text font-medium mt-1 font-sans">
                     Fundadora & Diretora Clínica
                   </p>
-                  <p className="text-[13px] sm:text-[14px] text-muted-foreground mt-3 leading-relaxed font-sans">
-                    Viviane Paz Torres é enfermeira, estomaterapeuta formada pela UERJ, enfermeira com habilitação em Podiatra e fundadora da Integral, Clínica de Enfermagem Especializada em Cabo Frio. Com mais de uma década de atuação na enfermagem, construiu sua trajetória com foco no tratamento de feridas, cuidado com pessoas com estomias e uso de tecnologias avançadas, unindo ciência, experiência e um olhar individualizado em cada atendimento. Também atua na formação de profissionais da saúde, é speaker da Coloplast na área de Ostomy Care e participou como coautora do Manual Clínico para Enfermeiros: Estomia de eliminação em pessoas adultas da Coloplast e do livro Gestão de Serviços de Atenção à Saúde da Pessoa com Estomia, contribuindo para o avanço da prática profissional. À frente da Integral, Viviane promove mais do que assistência, entrega qualidade de vida, autonomia e confiança para cada pessoa acompanhada.
-                  </p>
+                  <div className="text-[14px] sm:text-[15px] text-muted-foreground mt-3 leading-[1.75] font-sans space-y-3.5">
+                    <p>
+                      Viviane Paz Torres é graduada em Enfermagem, pós-graduada em Estomaterapia pela Universidade do Estado do Rio de Janeiro, habilitada em Ozonioterapia, Laserterapia e Podiatria Clínica, além de pós-graduanda em Enfermagem Regenerativa. É fundadora da Integral Clínica de Enfermagem Especializada, em Cabo Frio.
+                    </p>
+                    <p>
+                      Com mais de duas décadas de atuação na enfermagem, consolidou sua trajetória com foco no tratamento de feridas, no cuidado à pessoa com estomia e na aplicação de tecnologias avançadas, integrando ciência, expertise clínica e atendimento individualizado de alta performance. Sua prática é marcada pela busca contínua por inovação assistencial, segurança do paciente e excelência nos resultados.
+                    </p>
+                    <p>
+                      Também se destaca na capacitação de profissionais da saúde por meio de cursos, imersões e mentorias estratégicas. Atua como Speaker da Coloplast na área de Ostomy Care, participando como coautora do Manual Clínico para Enfermeiros: Estomia de eliminação em pessoas adultas e do livro Gestão de Serviços de Atenção à Saúde da Pessoa com Estomia, contribuindo diretamente para o fortalecimento e evolução da prática profissional no Brasil.
+                    </p>
+                  </div>
                 </div>
               </div>
               <p className="text-[14px] sm:text-[15px] italic text-foreground/70 mt-5 border-t border-border/30 pt-5 font-serif leading-relaxed">

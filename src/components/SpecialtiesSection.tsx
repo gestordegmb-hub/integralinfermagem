@@ -5,7 +5,6 @@ import woundCareIcon from "@/assets/icon-tratamento-feridas.png";
 import ostomyCareIcon from "@/assets/icon-cuidados-estomias.png";
 import diabeticFootIcon from "@/assets/icon-pe-diabetico.png";
 import laserOzoneIcon from "@/assets/icon-laser-ozonio.png";
-import ledTherapyIcon from "@/assets/icon-led-terapia.png";
 import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png";
 import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio-uploaded.jpg";
 import podiatryIcon from "@/assets/icon-podiatria-uploaded.jpg";
@@ -48,6 +47,11 @@ const services: Service[] = [
     imageIcon: ostomyCareIcon,
   },
   {
+    title: "Terapia Regenerativa (PRF)",
+    desc: "Cicatrização natural através de fibrina rica em plaquetas.",
+    imageIcon: regenerativeTherapyIcon,
+  },
+  {
     title: "Avaliação do Pé Diabético",
     desc: "Prevenção e cuidado para evitar complicações em pessoas com diabetes.",
     imageIcon: diabeticFootIcon,
@@ -56,16 +60,6 @@ const services: Service[] = [
     title: "Laserterapia e Ozonioterapia",
     desc: "Tecnologia avançada para regeneração tecidual e controle de infecções.",
     imageIcon: laserOzoneIcon,
-  },
-  {
-    title: "Led-terapia",
-    desc: "Tratamento não invasivo para acelerar a cicatrização e reduzir inflamação.",
-    imageIcon: ledTherapyIcon,
-  },
-  {
-    title: "Terapia Regenerativa (PRF)",
-    desc: "Cicatrização natural através de fibrina rica em plaquetas.",
-    imageIcon: regenerativeTherapyIcon,
   },
   {
     title: "Atendimento Domiciliar e em Consultório",
@@ -108,7 +102,7 @@ const SpecialtiesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 sm:gap-6">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -116,15 +110,15 @@ const SpecialtiesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07, duration: 0.5 }}
-              className="group bg-card rounded-md border border-border/50 p-6 text-center transition-all duration-500 hover:shadow-[0_16px_48px_-12px_hsl(var(--foreground)/0.14)] hover:-translate-y-1 hover:border-[hsl(var(--gold)/0.3)]"
+              className="group flex flex-col h-full bg-card rounded-md border border-border/50 p-6 text-center transition-all duration-500 hover:shadow-[0_16px_48px_-12px_hsl(var(--foreground)/0.14)] hover:-translate-y-1 hover:border-[hsl(var(--gold)/0.3)]"
             >
               <div className="flex justify-center">
                 <ServiceIcon title={s.title} imageSrc={s.imageIcon}>{s.icon}</ServiceIcon>
               </div>
-              <h3 className="font-semibold text-lg text-foreground font-serif mb-3 leading-tight min-h-[2.6em] flex items-center justify-center">
+              <h3 className="font-semibold text-lg text-foreground font-serif mb-3 leading-tight min-h-[2.6em] flex items-center justify-center text-balance">
                 {s.title}
               </h3>
-              <p className="text-[13px] sm:text-[14px] text-muted-foreground leading-relaxed font-sans">
+              <p className="text-[13px] sm:text-[14px] text-muted-foreground leading-relaxed font-sans mt-auto">
                 {s.desc}
               </p>
             </motion.div>
