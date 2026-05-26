@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Heart, Eye, Star } from "lucide-react";
 import clinicaImg from "@/assets/clinica.jpeg";
 import profissional1 from "@/assets/profissional_1.jpg";
-import ondasDecorativas from "@/assets/ondas-decorativas.png";
 
 const values = [
   { icon: Heart, title: "Missão", desc: "Oferecer cuidado especializado de excelência, unindo ciência, humanização e tecnologia para transformar vidas." },
@@ -13,31 +12,6 @@ const values = [
 const AboutSection = () => {
   return (
     <section id="sobre" className="relative overflow-hidden py-16 sm:py-24 lg:py-28">
-      {/* Decorative abstract background — bottom-left corner */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-16 -left-24 w-[60%] max-w-[680px] opacity-[0.07] sm:opacity-[0.09] lg:opacity-[0.1] blur-[1px] select-none"
-      >
-        <img
-          src={ondasDecorativas}
-          alt=""
-          className="w-full h-auto"
-          loading="lazy"
-        />
-      </div>
-      {/* Decorative abstract background — top-right corner */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-20 -right-28 w-[45%] max-w-[520px] opacity-[0.06] sm:opacity-[0.08] blur-[1px] rotate-180 select-none hidden sm:block"
-      >
-        <img
-          src={ondasDecorativas}
-          alt=""
-          className="w-full h-auto"
-          loading="lazy"
-        />
-      </div>
-
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         {/* Two columns: text left, image right */}
         <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 sm:gap-12 lg:gap-16 xl:gap-20 items-start mb-14 sm:mb-24">
