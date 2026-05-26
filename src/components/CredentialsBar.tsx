@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, Shield, Star, Users } from "lucide-react";
+import padraoVerde from "@/assets/padrao-verde.png";
 
 const credentials = [
   { icon: Award, label: "COREN Registrado" },
@@ -10,7 +11,16 @@ const credentials = [
 
 const CredentialsBar = () => {
   return (
-    <section className="py-6 sm:py-8" style={{ backgroundColor: '#055F57' }}>
+    <section
+      className="py-6 sm:py-8"
+      style={{
+        backgroundColor: '#055F57',
+        backgroundImage: `url(${padraoVerde})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
           {credentials.map((c, i) => (

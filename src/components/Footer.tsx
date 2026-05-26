@@ -1,9 +1,19 @@
 import { Instagram, Facebook, ExternalLink, Phone, MapPin, Clock } from "lucide-react";
 import logoImg from "@/assets/logo.png";
+import padraoVerde from "@/assets/padrao-verde.png";
 
 const Footer = () => {
   return (
-    <footer className="text-primary-foreground" style={{ backgroundColor: '#055F57' }}>
+    <footer
+      className="text-primary-foreground"
+      style={{
+        backgroundColor: '#055F57',
+        backgroundImage: `url(${padraoVerde})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       {/* Gold top border */}
       <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
 
