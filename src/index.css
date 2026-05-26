@@ -24,6 +24,10 @@
     --gold: 40 62% 42%;
     --gold-foreground: 225 55% 12%;
 
+    --gold-light: 41 71% 62%;
+    --gold-dark: 40 47% 41%;
+    --gradient-gold: linear-gradient(135deg, #e3b759 0%, #997937 100%);
+
     --muted: 220 14% 96%;
     --muted-foreground: 225 10% 40%;
 
@@ -136,5 +140,16 @@
 
   .gold-bg {
     background-color: hsl(var(--gold));
+  }
+
+  .gold-gradient-bg {
+    background-image: var(--gradient-gold);
+  }
+
+  .gold-gradient-text {
+    background-image: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
