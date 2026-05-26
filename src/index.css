@@ -21,12 +21,12 @@
     --secondary: 225 60% 7%;
     --secondary-foreground: 0 0% 100%;
 
-    --gold: 40 62% 42%;
+    --gold: 41 71% 62%;
     --gold-foreground: 225 55% 12%;
 
     --gold-light: 41 71% 62%;
     --gold-dark: 40 47% 41%;
-    --gradient-gold: linear-gradient(135deg, #e3b759 0%, #997937 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-light)) 0%, hsl(var(--gold-dark)) 100%);
 
     --muted: 220 14% 96%;
     --muted-foreground: 225 10% 40%;
