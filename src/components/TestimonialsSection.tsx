@@ -7,6 +7,7 @@ import fabioDalanheseAvatar from "@/assets/depoimento-fabio-dalanhese.png";
 import lenicePintoAvatar from "@/assets/depoimento-lenice-pinto.png";
 import viniciusAraujoAvatar from "@/assets/depoimento-vinicius-araujo.png";
 import janainaRochaAvatar from "@/assets/depoimento-janaina-rocha.png";
+import bgDepoimentos from "@/assets/bg-depoimentos.png";
 
 const testimonials = [
   {
@@ -70,8 +71,17 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="depoimentos" className="bg-background py-16 sm:py-24 lg:py-32">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="depoimentos"
+      className="relative py-16 sm:py-24 lg:py-32 bg-background"
+    >
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
+        style={{ backgroundImage: `url(${bgDepoimentos})` }}
+      />
+      <div aria-hidden="true" className="absolute inset-0 bg-background/60" />
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
