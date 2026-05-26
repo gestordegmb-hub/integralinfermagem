@@ -272,7 +272,7 @@ const GallerySection = () => {
 
               <figcaption className="absolute bottom-0 left-0 right-0 p-5 text-center sm:p-7">
                 <span className="mx-auto mb-4 block h-px w-10 bg-gold" />
-                <h3 className="font-serif text-2xl font-semibold italic leading-tight text-secondary-foreground drop-shadow-sm sm:text-4xl">
+                <h3 className="font-serif text-2xl font-semibold italic leading-tight text-gold drop-shadow-sm sm:text-4xl">
                   {activeItem.label}
                 </h3>
               </figcaption>
