@@ -77,10 +77,10 @@ const TestimonialsSection = () => {
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
         style={{ backgroundImage: `url(${bgDepoimentos})` }}
       />
-      <div aria-hidden="true" className="absolute inset-0 bg-background/60" />
+      <div aria-hidden="true" className="absolute inset-0 bg-background/30" />
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
