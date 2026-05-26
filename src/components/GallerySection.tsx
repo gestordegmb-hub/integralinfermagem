@@ -244,8 +244,6 @@ const GallerySection = () => {
                 />
               </AnimatePresence>
 
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-secondary/70 via-secondary/5 to-transparent" />
-
               <button
                 type="button"
                 tabIndex={-1}
