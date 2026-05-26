@@ -34,6 +34,8 @@ export default {
         gold: {
           DEFAULT: "hsl(var(--gold))",
           foreground: "hsl(var(--gold-foreground))",
+          light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -70,6 +72,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-gold": "var(--gradient-gold)",
       },
       keyframes: {
         "accordion-down": {
