@@ -7,7 +7,7 @@ const Footer = () => {
     <footer
       className="text-primary-foreground"
       style={{
-        backgroundColor: '#055F57',
+        backgroundColor: '#09594a',
         backgroundImage: `url(${padraoVerde})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',

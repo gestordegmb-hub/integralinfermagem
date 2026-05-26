@@ -14,7 +14,7 @@ const CredentialsBar = () => {
     <section
       className="py-6 sm:py-8"
       style={{
-        backgroundColor: '#055F57',
+        backgroundColor: '#09594a',
         backgroundImage: `url(${padraoVerde})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',

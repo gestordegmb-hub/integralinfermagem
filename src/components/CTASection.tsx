@@ -8,7 +8,7 @@ const CTASection = () => {
     <section
       className="relative py-16 sm:py-24 lg:py-32 overflow-hidden"
       style={{
-        backgroundColor: '#055F57',
+        backgroundColor: '#09594a',
         backgroundImage: `url(${padraoVerde})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
