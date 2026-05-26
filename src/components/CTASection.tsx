@@ -1,17 +1,20 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, CheckCircle } from "lucide-react";
+import padraoVerde from "@/assets/padrao-verde.png";
 
 const CTASection = () => {
   return (
-    <section className="relative py-16 sm:py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: '#055F57' }}>
-      {/* Subtle pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 25% 25%, white 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-        }} />
-      </div>
+    <section
+      className="relative py-16 sm:py-24 lg:py-32 overflow-hidden"
+      style={{
+        backgroundColor: '#055F57',
+        backgroundImage: `url(${padraoVerde})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
