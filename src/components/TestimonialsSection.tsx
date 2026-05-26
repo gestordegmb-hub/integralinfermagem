@@ -7,7 +7,6 @@ import fabioDalanheseAvatar from "@/assets/depoimento-fabio-dalanhese.png";
 import lenicePintoAvatar from "@/assets/depoimento-lenice-pinto.png";
 import viniciusAraujoAvatar from "@/assets/depoimento-vinicius-araujo.png";
 import janainaRochaAvatar from "@/assets/depoimento-janaina-rocha.png";
-import bgDepoimentos from "@/assets/bg-depoimentos.png";
 
 const testimonials = [
   {
@@ -75,15 +74,6 @@ const TestimonialsSection = () => {
       id="depoimentos"
       className="relative py-16 sm:py-24 lg:py-32 bg-background"
     >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${bgDepoimentos})`,
-          filter: "saturate(1.15)",
-        }}
-      />
-      <div aria-hidden="true" className="absolute inset-0 bg-background/15" />
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
