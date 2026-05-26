@@ -1,5 +1,5 @@
 import { Instagram, Facebook, ExternalLink, Phone, MapPin, Clock } from "lucide-react";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/logo-footer.png";
 import padraoVerde from "@/assets/padrao-verde.png";
 
 const Footer = () => {
@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <img src={logoImg} alt="Clínica Integral" className="w-10 h-10 rounded-full object-cover" />
+              <img src={logoImg} alt="Clínica Integral" className="w-12 h-12 object-contain" />
               <div>
                 <span className="font-semibold text-base tracking-wide font-serif block">Clínica Integral</span>
                 <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold font-sans">Enfermagem Especializada</span>
