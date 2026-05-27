@@ -4,6 +4,7 @@ import IntroSection from "@/components/IntroSection";
 import AboutSection from "@/components/AboutSection";
 import CredentialsBar from "@/components/CredentialsBar";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
+import SectionDivider from "@/components/SectionDivider";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import GallerySection from "@/components/GallerySection";
 import DifferentialsSection from "@/components/DifferentialsSection";
@@ -29,6 +30,7 @@ const Index = () => {
         <HeroSection />
         <IntroSection />
         <AboutSection />
+        <SectionDivider />
         <CredentialsBar />
         <SpecialtiesSection />
         <BeforeAfterSection />
