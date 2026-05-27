@@ -1,19 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, CheckCircle } from "lucide-react";
-import padraoDourado from "@/assets/padrao-dourado.png";
-
 const CTASection = () => {
   return (
     <section
       className="relative py-16 sm:py-24 lg:py-32 overflow-hidden"
-      style={{
-        backgroundColor: '#09594a',
-        backgroundImage: `url(${padraoDourado})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
+      style={{ backgroundColor: '#09594a' }}
     >
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
