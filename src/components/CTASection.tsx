@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, CheckCircle } from "lucide-react";
+import padraoDourado from "@/assets/padrao-dourado.png";
+
 const CTASection = () => {
+  const buttonBgStyle = {
+    backgroundImage: `url(${padraoDourado})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  } as const;
+
   return (
     <section
       className="relative py-16 sm:py-24 lg:py-32 overflow-hidden"
@@ -45,7 +53,7 @@ const CTASection = () => {
               rel="noopener noreferrer"
               className="w-full sm:w-auto"
             >
-              <Button variant="hero" size="lg" className="gap-2.5 px-5 sm:px-10 h-[52px] w-full uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] hover:scale-105">
+              <Button variant="hero" size="lg" style={buttonBgStyle} className="gap-2.5 px-5 sm:px-10 h-[52px] w-full uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] hover:scale-105 text-primary border border-gold/40">
                 <MessageCircle className="w-[18px] h-[18px] shrink-0" />
                 Agende sua Consulta
               </Button>
@@ -54,7 +62,8 @@ const CTASection = () => {
               <Button
                 variant="heroOutline"
                 size="lg"
-                className="gap-2.5 px-5 sm:px-10 h-[52px] w-full uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em]"
+                style={buttonBgStyle}
+                className="gap-2.5 px-5 sm:px-10 h-[52px] w-full uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] text-primary border border-gold/40 hover:scale-105"
               >
                 <Phone className="w-[18px] h-[18px] shrink-0" />
                 Ligar Agora
