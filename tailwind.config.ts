@@ -16,6 +16,8 @@ export default {
       fontFamily: {
         sans: ["DM Sans", "system-ui", "sans-serif"],
         serif: ["Cormorant Garamond", "Georgia", "serif"],
+        vaughan: ["Oswald", "Impact", "sans-serif"],
+        filson: ["Nunito", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
