@@ -12,12 +12,12 @@ const cases = [
   {
     before: before1,
     after: after1,
-    title: "Tratamento Avançado de Feridas",
+    title: "Tratamento avançado de feridas",
   },
   {
     before: before2,
     after: after2,
-    title: "Tratamento Avançado de Feridas",
+    title: "Tratamento avançado de feridas",
   },
 ];
 
@@ -144,9 +144,9 @@ const BeforeAfterSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-14"
         >
-          <p className="section-label">Resultados Reais</p>
+          <p className="section-label">Resultados reais</p>
           <h2 className="section-title">
-            Transformações que <br className="hidden sm:inline" />Mudam Vidas
+            Transformações que <br className="hidden sm:inline" />mudam vidas
           </h2>
           <p className="section-desc max-w-xl mx-auto">
             Evolução real no cuidado de feridas, com abordagem especializada, tecnologias avançadas e acompanhamento em todas as etapas. Com foco é conduzir o processo de cicatrização, reduzir riscos de complicações e promover mais conforto, autonomia e qualidade de vida ao paciente.

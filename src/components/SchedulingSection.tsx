@@ -4,16 +4,16 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, Phone, Clock } from "lucide-react";
 
 const specialtyOptions = [
-  "Tratamento Avançado de Feridas",
+  "Tratamento avançado de feridas",
   "Estomias",
-  "Pé Diabético",
+  "Pé diabético",
   "Laserterapia",
   "Ozonioterapia",
   "LEDterapia",
-  "Terapia Regenerativa",
+  "Terapia regenerativa",
   "Podiatria",
   "Pós-operatórios",
-  "Mentoria e Treinamento",
+  "Mentoria e treinamento",
 ];
 
 const contactInfo = [
@@ -51,7 +51,7 @@ const SchedulingSection = () => {
           className="text-center max-w-xl mx-auto mb-14 sm:mb-20"
         >
           <span className="section-label">Contato</span>
-          <h2 className="section-title">Estamos Prontos para Atendê-lo</h2>
+          <h2 className="section-title">Estamos prontos para atendê-lo</h2>
           <div className="premium-divider" />
         </motion.div>
 

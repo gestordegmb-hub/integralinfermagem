@@ -37,32 +37,32 @@ const ServiceIcon = ({ children, imageSrc, title }: { children?: React.ReactNode
 
 const services: Service[] = [
   {
-    title: "Tratamento Avançado de Feridas",
+    title: "Tratamento avançado de feridas",
     desc: "Tratamento especializado para acelerar a cicatrização e prevenir complicações.",
     imageIcon: woundCareIcon,
   },
   {
-    title: "Cuidados com Estomias",
+    title: "Cuidados com estomias",
     desc: "Suporte e orientação para melhor adaptação e qualidade de vida.",
     imageIcon: ostomyCareIcon,
   },
   {
-    title: "Terapia Regenerativa (PRF)",
+    title: "Terapia regenerativa (PRF)",
     desc: "Cicatrização natural através de fibrina rica em plaquetas.",
     imageIcon: regenerativeTherapyIcon,
   },
   {
-    title: "Avaliação do Pé Diabético",
+    title: "Avaliação do pé diabético",
     desc: "Prevenção e cuidado para evitar complicações em pessoas com diabetes.",
     imageIcon: diabeticFootIcon,
   },
   {
-    title: "Laserterapia e Ozonioterapia",
+    title: "Laserterapia e ozonioterapia",
     desc: "Tecnologia avançada para regeneração tecidual e controle de infecções.",
     imageIcon: laserOzoneIcon,
   },
   {
-    title: "Atendimento Domiciliar e em Consultório",
+    title: "Atendimento domiciliar e em consultório",
     desc: "Cuidado personalizado onde o paciente estiver, com a mesma qualidade.",
     imageIcon: homeClinicCareIcon,
   },
@@ -72,12 +72,12 @@ const services: Service[] = [
     imageIcon: podiatryIcon,
   },
   {
-    title: "Cuidados Pós-operatórios",
+    title: "Cuidados pós-operatórios",
     desc: "Suporte à recuperação e prevenção de infecções após cirurgias.",
     imageIcon: postoperativeCareIcon,
   },
   {
-    title: "Mentoria e Capacitação",
+    title: "Mentoria e capacitação",
     desc: "Educação profissional e orientação para enfermeiros especialistas.",
     imageIcon: mentoringTrainingIcon,
   },
@@ -95,7 +95,7 @@ const SpecialtiesSection = () => {
           className="text-center max-w-2xl mx-auto mb-14 sm:mb-20"
         >
           <span className="section-label">Serviços</span>
-          <h2 className="section-title">Nossos Serviços</h2>
+          <h2 className="section-title">Nossos serviços</h2>
           <div className="premium-divider" />
           <p className="section-desc mt-6">
             Atendimento especializado com tecnologia avançada e cuidado humanizado

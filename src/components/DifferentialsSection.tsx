@@ -2,17 +2,17 @@ import { motion } from "framer-motion";
 import { Heart, Award, Cog, Clock } from "lucide-react";
 
 const differentials = [
-  { num: "01", icon: Heart, title: "Atendimento Humanizado", desc: "Cada paciente é único. Oferecemos um acolhimento que vai além do cuidado técnico, com atenção às necessidades emocionais e individuais." },
-  { num: "02", icon: Award, title: "Profissionais Qualificados", desc: "Equipe certificada e em constante atualização, com especializações reconhecidas nacional e internacionalmente." },
-  { num: "03", icon: Cog, title: "Tecnologia de Ponta", desc: "Equipamentos de última geração como laser, ozônio e LEDterapia para resultados mais rápidos e eficazes." },
-  { num: "04", icon: Clock, title: "Atendimento Ágil", desc: "Resposta rápida, agendamento facilitado e acompanhamento contínuo para garantir a melhor experiência." },
+  { num: "01", icon: Heart, title: "Atendimento humanizado", desc: "Cada paciente é único. Oferecemos um acolhimento que vai além do cuidado técnico, com atenção às necessidades emocionais e individuais." },
+  { num: "02", icon: Award, title: "Profissionais qualificados", desc: "Equipe certificada e em constante atualização, com especializações reconhecidas nacional e internacionalmente." },
+  { num: "03", icon: Cog, title: "Tecnologia de ponta", desc: "Equipamentos de última geração como laser, ozônio e LEDterapia para resultados mais rápidos e eficazes." },
+  { num: "04", icon: Clock, title: "Atendimento ágil", desc: "Resposta rápida, agendamento facilitado e acompanhamento contínuo para garantir a melhor experiência." },
 ];
 
 const stats = [
-  { num: "+2000", label: "Pacientes Atendidos" },
-  { num: "+15", label: "Anos de Experiência" },
-  { num: "100%", label: "Índice de Satisfação" },
-  { num: "5.0", label: "Avaliação Google" },
+  { num: "+2000", label: "Pacientes atendidos" },
+  { num: "+15", label: "Anos de experiência" },
+  { num: "100%", label: "Índice de satisfação" },
+  { num: "5.0", label: "Avaliação google" },
 ];
 
 const DifferentialsSection = () => {
@@ -28,7 +28,7 @@ const DifferentialsSection = () => {
         >
           <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.2em] text-gold font-semibold font-sans drop-shadow-[0_1px_6px_rgba(196,163,90,0.35)]">Diferenciais</span>
           <h2 className="text-[28px] sm:text-4xl md:text-[2.75rem] lg:text-5xl font-semibold mt-4 mb-5 text-white leading-[1.15] font-serif italic">
-            O Que Nos Torna Diferentes
+            O que nos torna diferentes
           </h2>
           <div className="w-16 h-[2px] mx-auto mt-5 bg-gold rounded-full" />
         </motion.div>
