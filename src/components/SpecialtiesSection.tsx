@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import woundCareIcon from "@/assets/icon-tratamento-feridas-uploaded.png";
 import ostomyCareIcon from "@/assets/icon-cuidados-estomias.png";
-import diabeticFootIcon from "@/assets/icon-pe-diabetico.png";
+import diabeticFootIcon from "@/assets/icon-pe-diabetico-uploaded.png";
 import laserOzoneIcon from "@/assets/icon-laser-ozonio.png";
 import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png";
 import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio-uploaded.jpg";
