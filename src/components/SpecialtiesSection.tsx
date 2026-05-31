@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import woundCareIcon from "@/assets/icon-tratamento-feridas-uploaded.png";
-import ostomyCareIcon from "@/assets/icon-cuidados-estomias.png";
+import ostomyCareIcon from "@/assets/icon-cuidados-estomias-uploaded.png";
 import diabeticFootIcon from "@/assets/icon-pe-diabetico-uploaded.png";
 import laserOzoneIcon from "@/assets/icon-laser-ozonio.png";
 import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png";
