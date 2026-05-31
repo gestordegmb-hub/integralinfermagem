@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import woundCareIcon from "@/assets/icon-tratamento-feridas-uploaded.png";
-import ostomyCareIcon from "@/assets/icon-cuidados-estomias-uploaded.png";
-import diabeticFootIcon from "@/assets/icon-pe-diabetico-uploaded.png";
-import laserOzoneIcon from "@/assets/icon-laser-ozonio-uploaded.png";
-import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf-uploaded.png";
-import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio-v2.png";
-import podiatryIcon from "@/assets/icon-podiatria-v2.png";
-import postoperativeCareIcon from "@/assets/icon-cuidados-pos-operatorios-uploaded.png";
-import mentoringTrainingIcon from "@/assets/icon-mentoria-capacitacao-v2.png";
+import woundCareIcon from "@/assets/icon-tratamento-feridas-uploaded-circle.png";
+import ostomyCareIcon from "@/assets/icon-cuidados-estomias-uploaded-circle.png";
+import diabeticFootIcon from "@/assets/icon-pe-diabetico-uploaded-circle.png";
+import laserOzoneIcon from "@/assets/icon-laser-ozonio-uploaded-circle.png";
+import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf-uploaded-circle.png";
+import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio-v2-circle.png";
+import podiatryIcon from "@/assets/icon-podiatria-v2-circle.png";
+import postoperativeCareIcon from "@/assets/icon-cuidados-pos-operatorios-uploaded-circle.png";
+import mentoringTrainingIcon from "@/assets/icon-mentoria-capacitacao-v2-circle.png";
 
 type Service = {
   title: string;
@@ -19,12 +19,12 @@ type Service = {
 };
 
 const ServiceIcon = ({ children, imageSrc, title }: { children?: React.ReactNode; imageSrc?: string; title: string }) => (
-  <div className="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center mb-5 transition-transform duration-500 group-hover:scale-105">
+  <div className="w-24 h-24 flex items-center justify-center mb-5 transition-transform duration-500 group-hover:scale-105">
     {imageSrc ? (
       <img
         src={imageSrc}
         alt={`Ícone de ${title}`}
-        className="w-full h-full object-cover scale-[1.15]"
+        className="w-full h-full object-contain"
         loading="lazy"
       />
     ) : (
