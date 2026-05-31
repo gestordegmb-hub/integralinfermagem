@@ -19,12 +19,12 @@ type Service = {
 };
 
 const ServiceIcon = ({ children, imageSrc, title }: { children?: React.ReactNode; imageSrc?: string; title: string }) => (
-  <div className="w-24 h-24 rounded-full flex items-center justify-center mb-5 transition-transform duration-500 group-hover:scale-105">
+  <div className="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center mb-5 transition-transform duration-500 group-hover:scale-105">
     {imageSrc ? (
       <img
         src={imageSrc}
         alt={`Ícone de ${title}`}
-        className="w-full h-full object-contain"
+        className="w-full h-full object-cover scale-[1.15]"
         loading="lazy"
       />
     ) : (
