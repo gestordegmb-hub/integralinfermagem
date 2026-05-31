@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import woundCareIcon from "@/assets/icon-tratamento-feridas-uploaded.png";
 import ostomyCareIcon from "@/assets/icon-cuidados-estomias-uploaded.png";
 import diabeticFootIcon from "@/assets/icon-pe-diabetico-uploaded.png";
-import laserOzoneIcon from "@/assets/icon-laser-ozonio.png";
+import laserOzoneIcon from "@/assets/icon-laser-ozonio-uploaded.png";
 import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf.png";
 import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio-uploaded.jpg";
 import podiatryIcon from "@/assets/icon-podiatria-v2.png";
