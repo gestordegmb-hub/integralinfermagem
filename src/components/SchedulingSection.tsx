@@ -4,16 +4,16 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, Phone, Clock } from "lucide-react";
 
 const specialtyOptions = [
-  "Tratamento Avançado de Feridas",
+  "Tratamento avançado de feridas",
   "Estomias",
-  "Pé Diabético",
+  "Pé diabético",
   "Laserterapia",
   "Ozonioterapia",
   "LEDterapia",
-  "Terapia Regenerativa",
+  "Terapia regenerativa",
   "Podiatria",
   "Pós-operatórios",
-  "Mentoria e Treinamento",
+  "Mentoria e treinamento",
 ];
 
 const contactInfo = [
