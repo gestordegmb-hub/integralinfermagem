@@ -95,7 +95,7 @@ const SpecialtiesSection = () => {
           className="text-center max-w-2xl mx-auto mb-14 sm:mb-20"
         >
           <span className="section-label">Serviços</span>
-          <h2 className="section-title">Nossos Serviços</h2>
+          <h2 className="section-title">Nossos serviços</h2>
           <div className="premium-divider" />
           <p className="section-desc mt-6">
             Atendimento especializado com tecnologia avançada e cuidado humanizado

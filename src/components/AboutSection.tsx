@@ -22,9 +22,9 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="text-center sm:text-left">
-              <span className="section-label">Sobre a Clínica</span>
+              <span className="section-label">Sobre a clínica</span>
               <h2 className="section-title sm:!text-left">
-                Uma Trajetória de{"\u00A0"}Dedicação{"\u00A0"}e{"\u00A0"}Cuidado
+                Uma trajetória de{"\u00A0"}dedicação{"\u00A0"}e{"\u00A0"}cuidado
               </h2>
               <div className="premium-divider sm:!mx-0" />
             </div>

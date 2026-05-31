@@ -51,7 +51,7 @@ const SchedulingSection = () => {
           className="text-center max-w-xl mx-auto mb-14 sm:mb-20"
         >
           <span className="section-label">Contato</span>
-          <h2 className="section-title">Estamos Prontos para Atendê-lo</h2>
+          <h2 className="section-title">Estamos prontos para atendê-lo</h2>
           <div className="premium-divider" />
         </motion.div>
 

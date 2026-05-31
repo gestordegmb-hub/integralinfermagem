@@ -50,7 +50,7 @@ const FAQSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-14"
         >
-          <p className="section-label">Dúvidas Frequentes</p>
+          <p className="section-label">Dúvidas frequentes</p>
           <h2 className="section-title">
             Perguntas comuns sobre <br className="hidden sm:inline" />o cuidado especializado
           </h2>

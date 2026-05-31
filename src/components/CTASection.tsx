@@ -25,7 +25,7 @@ const CTASection = () => {
           className="max-w-2xl mx-auto text-center"
         >
           <h2 className="text-[28px] sm:text-4xl lg:text-5xl font-semibold text-white font-serif italic leading-[1.15] mb-6 sm:mb-8">
-            Agende Sua Consulta com Especialistas
+            Agende sua consulta
           </h2>
           <p className="text-[15px] sm:text-base text-white/70 leading-[1.65] mb-8 sm:mb-10 font-sans max-w-lg mx-auto">
             Dê o primeiro passo para um cuidado de saúde verdadeiramente especializado.

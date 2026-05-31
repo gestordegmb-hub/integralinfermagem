@@ -28,7 +28,7 @@ const DifferentialsSection = () => {
         >
           <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.2em] text-gold font-semibold font-sans drop-shadow-[0_1px_6px_rgba(196,163,90,0.35)]">Diferenciais</span>
           <h2 className="text-[28px] sm:text-4xl md:text-[2.75rem] lg:text-5xl font-semibold mt-4 mb-5 text-white leading-[1.15] font-serif italic">
-            O Que Nos Torna Diferentes
+            O que nos torna diferentes
           </h2>
           <div className="w-16 h-[2px] mx-auto mt-5 bg-gold rounded-full" />
         </motion.div>
