@@ -32,7 +32,7 @@ const galleryItems = [
     src: regenerativeTherapyImage,
     srcSet: `${regenerativeTherapy480} 480w, ${regenerativeTherapy768} 768w, ${regenerativeTherapy960} 960w`,
     alt: "Atendimento de terapia regenerativa PRF na clínica Integral",
-    label: "Terapia Regenerativa (PRF)",
+    label: "Terapia regenerativa (PRF)",
   },
 ];
 

@@ -25,7 +25,7 @@ const Footer = () => {
               <img src={logoImg} alt="Clínica Integral" className="w-12 h-12 object-contain" />
               <div>
                 <span className="font-semibold text-base tracking-wide font-serif block">Clínica Integral</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold font-sans">Enfermagem Especializada</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold font-sans">Enfermagem especializada</span>
               </div>
             </div>
             <div className="w-10 h-[2px] bg-gold mb-5 rounded-full" />
@@ -52,7 +52,7 @@ const Footer = () => {
             <ul className="space-y-3.5 text-[14px] text-white/80 font-sans">
               {[
                 { label: "Início", href: "#inicio" },
-                { label: "Sobre a Clínica", href: "#sobre" },
+                { label: "Sobre a clínica", href: "#sobre" },
                 { label: "Serviços", href: "#especialidades" },
                 { label: "Diferenciais", href: "#diferenciais" },
                 { label: "Depoimentos", href: "#depoimentos" },

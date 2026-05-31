@@ -5,8 +5,8 @@ import padraoVerde from "@/assets/padrao-verde.png";
 const credentials = [
   { icon: Award, label: "COREN Registrado" },
   { icon: Shield, label: "Estomaterapeuta UERJ" },
-  { icon: Star, label: "Speaker Coloplast" },
-  { icon: Users, label: "Equipe Especializada" },
+  { icon: Star, label: "Speaker coloplast" },
+  { icon: Users, label: "Equipe especializada" },
 ];
 
 const CredentialsBar = () => {

@@ -12,12 +12,12 @@ const cases = [
   {
     before: before1,
     after: after1,
-    title: "Tratamento Avançado de Feridas",
+    title: "Tratamento avançado de feridas",
   },
   {
     before: before2,
     after: after2,
-    title: "Tratamento Avançado de Feridas",
+    title: "Tratamento avançado de feridas",
   },
 ];
 

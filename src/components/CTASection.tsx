@@ -55,7 +55,7 @@ const CTASection = () => {
             >
               <Button variant="hero" size="lg" style={buttonBgStyle} className="gap-2.5 px-5 sm:px-10 h-[52px] w-full uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] hover:scale-105 text-primary border border-gold/40">
                 <MessageCircle className="w-[18px] h-[18px] shrink-0" />
-                Agende sua Consulta
+                Agende sua consulta
               </Button>
             </a>
             <a href="tel:+5522974017588" className="w-full sm:w-auto">
@@ -66,7 +66,7 @@ const CTASection = () => {
                 className="gap-2.5 px-5 sm:px-10 h-[52px] w-full uppercase text-[12px] sm:text-[13px] tracking-[0.08em] sm:tracking-[0.12em] text-primary border border-gold/40 hover:scale-105"
               >
                 <Phone className="w-[18px] h-[18px] shrink-0" />
-                Ligar Agora
+                Ligar agora
               </Button>
             </a>
           </div>

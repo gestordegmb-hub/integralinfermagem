@@ -5,22 +5,22 @@ import { Heart, Home, Users, Sparkles, MessageCircle } from "lucide-react";
 const features = [
   {
     icon: Home,
-    title: "Home Care",
+    title: "Home care",
     description: "Atendimento domiciliar especializado com toda a estrutura e conforto que você merece.",
   },
   {
     icon: Users,
-    title: "Profissionais Qualificados",
+    title: "Profissionais qualificados",
     description: "Equipe multidisciplinar com anos de experiência e formação contínua em saúde.",
   },
   {
     icon: Sparkles,
-    title: "Tratamentos Avançados",
+    title: "Tratamentos avançados",
     description: "Tecnologia de ponta aliada às melhores práticas clínicas para resultados superiores.",
   },
   {
     icon: Heart,
-    title: "Cuidado Humanizado",
+    title: "Cuidado humanizado",
     description: "Acolhimento e empatia em cada etapa do tratamento, priorizando o bem-estar do paciente.",
   },
 ];
