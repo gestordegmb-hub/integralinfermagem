@@ -8,7 +8,7 @@ import laserOzoneIcon from "@/assets/icon-laser-ozonio-uploaded.png";
 import regenerativeTherapyIcon from "@/assets/icon-terapia-regenerativa-prf-uploaded.png";
 import homeClinicCareIcon from "@/assets/icon-atendimento-domiciliar-consultorio-v2.png";
 import podiatryIcon from "@/assets/icon-podiatria-v2.png";
-import postoperativeCareIcon from "@/assets/icon-cuidados-pos-operatorios-uploaded.png";
+import postoperativeCareIcon from "@/assets/icon-cuidados-pos-operatorios-v2.png";
 import mentoringTrainingIcon from "@/assets/icon-mentoria-capacitacao-v2.png";
 
 type Service = {
