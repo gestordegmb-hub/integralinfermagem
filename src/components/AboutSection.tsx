@@ -65,7 +65,7 @@ const AboutSection = () => {
                   <p className="text-[11px] uppercase tracking-[0.12em] gold-text font-medium mt-1 font-sans">
                     Fundadora & Diretora Clínica
                   </p>
-                  <div className="text-[14px] sm:text-[15px] text-muted-foreground mt-3 leading-[1.75] font-sans space-y-3.5">
+                  <div className="text-[14px] sm:text-[15px] text-muted-foreground mt-3 leading-[1.75] font-sans space-y-3.5 text-justify">
                     <p>
                       Viviane Paz Torres é graduada em Enfermagem, pós-graduada em Estomaterapia pela Universidade do Estado do Rio de Janeiro, habilitada em Ozonioterapia, Laserterapia e Podiatria Clínica, além de pós-graduanda em Enfermagem Regenerativa. É fundadora da Integral Clínica de Enfermagem Especializada, em Cabo Frio.
                     </p>

@@ -52,7 +52,7 @@ const services: Service[] = [
     imageIcon: regenerativeTherapyIcon,
   },
   {
-    title: "Avaliação do pé diabético",
+    title: "Avaliação do pé da pessoa com Diabetes",
     desc: "Prevenção e cuidado para evitar complicações em pessoas com diabetes.",
     imageIcon: diabeticFootIcon,
   },
