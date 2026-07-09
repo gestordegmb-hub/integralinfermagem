@@ -49,7 +49,7 @@ const IntroSection = () => {
           className="section-title text-center max-w-3xl mx-auto"
         >
           Tratamento avançado de feridas e cuidados com estomias em{" "}
-          <span className="text-gold">Cabo Frio</span>
+          <span className="text-gold-dark">Cabo Frio</span>
         </motion.h2>
 
         {/* Subtitle */}
@@ -75,7 +75,7 @@ const IntroSection = () => {
               className="premium-card p-6 sm:p-8 text-center group"
             >
               <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
-                <feature.icon className="w-6 h-6 text-gold" />
+                <feature.icon className="w-6 h-6 text-gold-dark" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-3 font-serif">
                 {feature.title}
