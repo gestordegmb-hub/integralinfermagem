@@ -102,7 +102,7 @@
   .section-label {
     @apply font-medium text-[10px] sm:text-[12px] uppercase tracking-[0.18em] sm:tracking-[0.2em];
     font-family: 'DM Sans', sans-serif;
-    color: hsl(var(--gold));
+    color: hsl(var(--gold-dark));
   }
 
   .section-title {
@@ -135,7 +135,7 @@
   }
 
   .gold-text {
-    color: hsl(var(--gold));
+    color: hsl(var(--gold-dark));
   }
 
   .gold-bg {

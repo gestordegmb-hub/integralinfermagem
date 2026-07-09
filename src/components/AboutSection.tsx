@@ -113,7 +113,7 @@ const AboutSection = () => {
               className="premium-card p-6 sm:p-8 text-center group"
             >
               <div className="w-14 h-14 mx-auto rounded-full bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors duration-500">
-                <v.icon className="w-6 h-6 text-gold" />
+                <v.icon className="w-6 h-6 text-gold-dark" />
               </div>
               <h3 className="font-semibold text-lg sm:text-xl text-foreground font-serif mb-3">{v.title}</h3>
               <p className="text-[14px] text-muted-foreground leading-relaxed font-sans">{v.desc}</p>
