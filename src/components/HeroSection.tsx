@@ -1,6 +1,7 @@
 import heroImg from "@/assets/hero-clinic.jpg";
+import heroMobileAsset from "@/assets/hero-clinic-mobile.png.asset.json";
 
-const HERO_BG = "#E5E4E2";
+const HERO_BG = "#09594a";
 
 const HeroSection = () => {
   return (
@@ -9,20 +10,21 @@ const HeroSection = () => {
       className="relative w-full overflow-hidden"
       style={{ backgroundColor: HERO_BG }}
     >
-      {/* Mobile: 4:5 aspect ratio, image fully visible */}
+      {/* Mobile: 4:5 vertical composition */}
       <div
         className="relative w-full lg:hidden"
         style={{ aspectRatio: "4 / 5", backgroundColor: HERO_BG }}
       >
         <img
-          src={heroImg}
+          src={heroMobileAsset.url}
           alt="Clínica Integral - Enfermagem especializada em Cabo Frio"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
           loading="eager"
-          width={1920}
-          height={1080}
+          width={1080}
+          height={1350}
         />
       </div>
+
 
       {/* Desktop: keep immersive full-bleed hero */}
       <div className="relative hidden lg:block h-[100svh] min-h-[640px]">
