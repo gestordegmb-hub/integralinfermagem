@@ -40,7 +40,11 @@ const Navbar = () => {
                 src={logoImg}
                 alt="Clínica Integral"
                 className="w-11 h-11 lg:w-12 lg:h-12 object-contain"
+                width={48}
+                height={48}
+                decoding="async"
               />
+
               <div className="leading-none">
                 <span
                   className={`font-semibold text-[15px] lg:text-base block transition-colors duration-500 font-serif ${
