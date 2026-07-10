@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <img src={logoImg} alt="Clínica Integral" className="w-12 h-12 object-contain" />
+              <img src={logoImg} alt="Clínica Integral" className="w-12 h-12 object-contain" width={48} height={48} loading="lazy" decoding="async" />
               <div>
                 <span className="font-semibold text-base tracking-wide font-serif block">Clínica Integral</span>
                 <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold font-sans">Enfermagem especializada</span>

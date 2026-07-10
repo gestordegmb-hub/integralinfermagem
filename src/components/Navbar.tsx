@@ -130,7 +130,7 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between p-5 border-b border-border/50">
           <a href="#inicio" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
-            <img src={logoImg} alt="Clínica Integral" className="w-10 h-10 object-contain" />
+            <img src={logoImg} alt="Clínica Integral" className="w-10 h-10 object-contain" width={40} height={40} loading="lazy" decoding="async" />
             <span className="font-semibold text-[15px] text-foreground font-serif">Clínica Integral</span>
           </a>
           <button className="text-muted-foreground hover:text-foreground transition-colors p-1.5" onClick={() => setIsOpen(false)} aria-label="Fechar menu">
