@@ -1,5 +1,6 @@
-import heroImg from "@/assets/hero-clinic.jpg";
+import heroDesktopAsset from "@/assets/hero-clinic-desktop.png.asset.json";
 import heroMobileAsset from "@/assets/hero-clinic-mobile.png.asset.json";
+
 
 const HERO_BG = "#09594a";
 
@@ -27,15 +28,16 @@ const HeroSection = () => {
 
 
       {/* Desktop: keep immersive full-bleed hero */}
-      <div className="relative hidden lg:block h-[100svh] min-h-[640px]">
+      <div className="relative hidden lg:block w-full" style={{ aspectRatio: "16 / 9" }}>
         <img
-          src={heroImg}
+          src={heroDesktopAsset.url}
           alt="Clínica Integral - Enfermeira profissional em ambiente clínico moderno"
-          className="w-full h-full object-cover object-[center_25%]"
+          className="w-full h-full object-cover"
           loading="eager"
           width={1920}
           height={1080}
         />
+
         <div className="absolute inset-0 bg-black/5" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
