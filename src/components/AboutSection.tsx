@@ -29,7 +29,7 @@ const AboutSection = () => {
               <div className="premium-divider sm:!mx-0" />
             </div>
 
-            <div className="space-y-5 mt-7 sm:mt-8 max-w-2xl text-[15px] sm:text-base text-muted-foreground leading-[1.7] font-sans">
+            <div className="space-y-5 mt-7 sm:mt-8 text-[15px] sm:text-base text-muted-foreground leading-[1.7] font-sans text-justify hyphens-auto">
               <p>
                 A Integral Clínica de Enfermagem Especializada nasceu da experiência prática e do compromisso com um
                 cuidado mais humano, resolutivo e especializado no tratamento de feridas. Localizada em Cabo Frio, a
