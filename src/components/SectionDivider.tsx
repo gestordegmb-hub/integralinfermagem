@@ -1,4 +1,4 @@
-import dividerWave from "@/assets/ondas-decorativas.png";
+import dividerWave from "@/assets/ondas-decorativas.webp";
 
 const SectionDivider = () => {
   return (

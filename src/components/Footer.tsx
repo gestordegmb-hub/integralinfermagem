@@ -1,5 +1,5 @@
 import { Instagram, Facebook, ExternalLink, Phone, MapPin, Clock } from "lucide-react";
-import logoImg from "@/assets/logo-footer.png";
+import logoImg from "@/assets/logo-footer.webp";
 import padraoVerde from "@/assets/padrao-verde.png";
 
 const Footer = () => {

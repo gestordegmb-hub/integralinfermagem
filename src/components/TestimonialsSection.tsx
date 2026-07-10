@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { BadgeCheck, ChevronLeft, ChevronRight, Star } from "lucide-react";
-import danieleSilveiraAvatar from "@/assets/depoimento-daniele-silveira.png";
-import julianaLoboAvatar from "@/assets/depoimento-juliana-lobo.png";
-import fabioDalanheseAvatar from "@/assets/depoimento-fabio-dalanhese.png";
-import lenicePintoAvatar from "@/assets/depoimento-lenice-pinto.png";
-import viniciusAraujoAvatar from "@/assets/depoimento-vinicius-araujo.png";
-import janainaRochaAvatar from "@/assets/depoimento-janaina-rocha.png";
+import danieleSilveiraAvatar from "@/assets/depoimento-daniele-silveira.webp";
+import julianaLoboAvatar from "@/assets/depoimento-juliana-lobo.webp";
+import fabioDalanheseAvatar from "@/assets/depoimento-fabio-dalanhese.webp";
+import lenicePintoAvatar from "@/assets/depoimento-lenice-pinto.webp";
+import viniciusAraujoAvatar from "@/assets/depoimento-vinicius-araujo.webp";
+import janainaRochaAvatar from "@/assets/depoimento-janaina-rocha.webp";
 
 const testimonials = [
   {

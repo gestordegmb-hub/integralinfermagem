@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Heart, Eye, Star } from "lucide-react";
-import clinicaImg from "@/assets/clinica.jpeg";
-import profissional1 from "@/assets/profissional_1.jpg";
+import clinicaImg from "@/assets/clinica.webp";
+import profissional1 from "@/assets/profissional_1.webp";
 
 const values = [
   { icon: Heart, title: "Missão", desc: "Oferecer cuidado especializado de excelência, unindo ciência, humanização e tecnologia para transformar vidas." },
