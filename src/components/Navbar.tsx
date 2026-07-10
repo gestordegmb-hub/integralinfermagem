@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Calendar } from "lucide-react";
-import logoImg from "@/assets/logo-navbar.png";
+import logoImg from "@/assets/logo-navbar.webp";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -40,7 +40,11 @@ const Navbar = () => {
                 src={logoImg}
                 alt="Clínica Integral"
                 className="w-11 h-11 lg:w-12 lg:h-12 object-contain"
+                width={48}
+                height={48}
+                decoding="async"
               />
+
               <div className="leading-none">
                 <span
                   className={`font-semibold text-[15px] lg:text-base block transition-colors duration-500 font-serif ${
@@ -126,7 +130,7 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between p-5 border-b border-border/50">
           <a href="#inicio" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
-            <img src={logoImg} alt="Clínica Integral" className="w-10 h-10 object-contain" />
+            <img src={logoImg} alt="Clínica Integral" className="w-10 h-10 object-contain" width={40} height={40} loading="lazy" decoding="async" />
             <span className="font-semibold text-[15px] text-foreground font-serif">Clínica Integral</span>
           </a>
           <button className="text-muted-foreground hover:text-foreground transition-colors p-1.5" onClick={() => setIsOpen(false)} aria-label="Fechar menu">
