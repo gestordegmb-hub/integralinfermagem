@@ -29,6 +29,9 @@ const IntroSection = () => {
   return (
     <section className="py-16 sm:py-28 lg:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="sr-only">
+          Clínica Integral — Enfermagem especializada em feridas e estomias em Cabo Frio
+        </h1>
         {/* Label */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
@@ -39,6 +42,7 @@ const IntroSection = () => {
         >
           Clínica de enfermagem especializada
         </motion.p>
+
 
         {/* Headline */}
         <motion.h2
