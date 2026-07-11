@@ -1,4 +1,4 @@
-import heroDesktopAsset from "@/assets/hero-clinic-desktop.png.asset.json";
+import heroDesktopAsset from "@/assets/hero-clinic-desktop-v2.png.asset.json";
 import heroMobileAsset from "@/assets/hero-clinic-mobile.png.asset.json";
 
 
