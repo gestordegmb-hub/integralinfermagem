@@ -51,37 +51,6 @@ const AboutSection = () => {
               </p>
             </div>
 
-            {/* Professional Card */}
-            <div className="mx-auto mt-8 max-w-3xl rounded-md border border-border/40 border-l-4 border-l-gold bg-muted/40 p-5 sm:mt-10 sm:p-8">
-              <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:text-left">
-                <img
-                  src={profissional1}
-                  alt="Enf.ª Viviane Paz Torres"
-                  className="h-32 w-32 flex-shrink-0 rounded-full border-2 border-gold/30 object-cover object-[center_20%] sm:h-40 sm:w-40"
-                  loading="lazy"
-                />
-                <div className="min-w-0">
-                  <p className="font-semibold text-base text-foreground font-serif">Enf.ª Viviane Paz Torres</p>
-                  <p className="text-[11px] uppercase tracking-[0.12em] gold-text font-medium mt-1 font-sans">
-                    Fundadora & Diretora Clínica
-                  </p>
-                  <div className="text-[14px] sm:text-[15px] text-muted-foreground mt-3 leading-[1.75] font-sans space-y-3.5 text-justify">
-                    <p>
-                      Viviane Paz Torres é graduada em Enfermagem, pós-graduada em Estomaterapia pela Universidade do Estado do Rio de Janeiro, habilitada em Ozonioterapia, Laserterapia e Podiatria Clínica, além de pós-graduanda em Enfermagem Regenerativa. É fundadora da Integral Clínica de Enfermagem Especializada, em Cabo Frio.
-                    </p>
-                    <p>
-                      Com mais de duas décadas de atuação na enfermagem, consolidou sua trajetória com foco no tratamento de feridas, no cuidado à pessoa com estomia e na aplicação de tecnologias avançadas, integrando ciência, expertise clínica e atendimento individualizado de alta performance. Sua prática é marcada pela busca contínua por inovação assistencial, segurança do paciente e excelência nos resultados.
-                    </p>
-                    <p>
-                      Também se destaca na capacitação de profissionais da saúde por meio de cursos, imersões e mentorias estratégicas. Atua como Speaker da Coloplast na área de Ostomy Care, participando como coautora do Manual Clínico para Enfermeiros: Estomia de eliminação em pessoas adultas e do livro Gestão de Serviços de Atenção à Saúde da Pessoa com Estomia, contribuindo diretamente para o fortalecimento e evolução da prática profissional no Brasil.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <p className="text-[14px] sm:text-[15px] italic text-foreground/70 mt-5 border-t border-border/30 pt-5 font-serif leading-relaxed">
-                "A excelência no cuidar é a nossa maior responsabilidade."
-              </p>
-            </div>
           </motion.div>
 
           <motion.div
@@ -100,6 +69,46 @@ const AboutSection = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Professional Card — full width horizontal */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-14 sm:mb-24"
+        >
+          <div className="rounded-md border border-border/40 border-l-4 border-l-gold bg-muted/40 p-5 sm:p-10 lg:p-12">
+            <div className="grid gap-8 sm:gap-10 lg:gap-14 lg:grid-cols-[auto_1fr] items-start">
+              <img
+                src={profissional1}
+                alt="Enf.ª Viviane Paz Torres"
+                className="mx-auto lg:mx-0 h-64 w-64 sm:h-80 sm:w-80 lg:h-[22rem] lg:w-[22rem] flex-shrink-0 rounded-full border-2 border-gold/30 object-cover object-[center_20%] shadow-lg"
+                loading="lazy"
+              />
+              <div className="min-w-0 text-center lg:text-left">
+                <p className="font-semibold text-xl sm:text-2xl text-foreground font-serif">Enf.ª Viviane Paz Torres</p>
+                <p className="text-[12px] uppercase tracking-[0.14em] gold-text font-medium mt-1.5 font-sans">
+                  Fundadora & Diretora Clínica
+                </p>
+                <div className="text-[15px] sm:text-base text-muted-foreground mt-5 leading-[1.75] font-sans space-y-4 text-justify hyphens-auto">
+                  <p>
+                    Viviane Paz Torres é graduada em Enfermagem, pós-graduada em Estomaterapia pela Universidade do Estado do Rio de Janeiro, habilitada em Ozonioterapia, Laserterapia e Podiatria Clínica, além de pós-graduanda em Enfermagem Regenerativa. É fundadora da Integral Clínica de Enfermagem Especializada, em Cabo Frio.
+                  </p>
+                  <p>
+                    Com mais de duas décadas de atuação na enfermagem, consolidou sua trajetória com foco no tratamento de feridas, no cuidado à pessoa com estomia e na aplicação de tecnologias avançadas, integrando ciência, expertise clínica e atendimento individualizado de alta performance. Sua prática é marcada pela busca contínua por inovação assistencial, segurança do paciente e excelência nos resultados.
+                  </p>
+                  <p>
+                    Também se destaca na capacitação de profissionais da saúde por meio de cursos, imersões e mentorias estratégicas. Atua como Speaker da Coloplast na área de Ostomy Care, participando como coautora do Manual Clínico para Enfermeiros: Estomia de eliminação em pessoas adultas e do livro Gestão de Serviços de Atenção à Saúde da Pessoa com Estomia, contribuindo diretamente para o fortalecimento e evolução da prática profissional no Brasil.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p className="text-[15px] sm:text-base italic text-foreground/70 mt-6 sm:mt-8 border-t border-border/30 pt-5 sm:pt-6 font-serif leading-relaxed text-center lg:text-left">
+              "A excelência no cuidar é a nossa maior responsabilidade."
+            </p>
+          </div>
+        </motion.div>
 
         {/* Mission, Vision, Values */}
         <div className="grid sm:grid-cols-3 gap-5 sm:gap-8">
