@@ -79,11 +79,11 @@ const AboutSection = () => {
           className="mb-14 sm:mb-24"
         >
           <div className="rounded-md border border-border/40 border-l-4 border-l-gold bg-muted/40 p-5 sm:p-10 lg:p-12">
-            <div className="grid gap-8 sm:gap-10 lg:gap-14 lg:grid-cols-[auto_1fr] items-start">
+            <div className="flex flex-col items-center gap-8 sm:gap-10 lg:grid lg:grid-cols-[auto_1fr] lg:gap-14 lg:items-start">
               <img
                 src={profissional1}
                 alt="Enf.ª Viviane Paz Torres"
-                className="mx-auto lg:mx-0 h-64 w-64 sm:h-80 sm:w-80 lg:h-[22rem] lg:w-[22rem] flex-shrink-0 rounded-full border-2 border-gold/30 object-cover object-[center_20%] shadow-lg"
+                className="h-56 w-56 sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-[22rem] lg:w-[22rem] flex-shrink-0 rounded-full border-2 border-gold/30 object-cover object-[center_20%] shadow-lg"
                 loading="lazy"
               />
               <div className="min-w-0 text-center lg:text-left">
