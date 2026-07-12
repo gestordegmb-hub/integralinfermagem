@@ -110,23 +110,6 @@ const AboutSection = () => {
           </div>
         </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="lg:sticky lg:top-28">
-              <img
-                src={clinicaImg}
-                alt="Fachada da Integral Clínica de Enfermagem"
-                className="rounded-md w-full aspect-[4/3] sm:aspect-[4/5] max-h-[620px] object-cover border border-gold/20 shadow-lg hover:shadow-xl transition-shadow duration-500"
-                loading="lazy"
-              />
-            </div>
-          </motion.div>
-        </div>
-
         {/* Mission, Vision, Values */}
         <div className="grid sm:grid-cols-3 gap-5 sm:gap-8">
           {values.map((v, i) => (
