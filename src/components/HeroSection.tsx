@@ -26,7 +26,7 @@ const HeroSection = () => {
             alt="Clínica Integral - Enfermagem especializada em Cabo Frio"
             className="absolute inset-0 w-full h-full object-cover object-center"
             loading="eager"
-            fetchPriority="high"
+            {...{ fetchpriority: "high" }}
             decoding="async"
             width={1080}
             height={1350}
